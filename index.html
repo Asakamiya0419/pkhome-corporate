@@ -21,7 +21,7 @@ a{color:inherit;text-decoration:none}
 img,svg{max-width:100%}
 h1,h2,h3{margin:0;font-weight:300;line-height:1.5;text-wrap:balance}
 .wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(20px,5vw,64px)}
-section{padding-block:clamp(80px,12vw,160px)}
+section{padding-block:clamp(80px,12vw,160px);scroll-margin-top:24px}
 .label{font-family:var(--latin);font-size:11px;font-weight:400;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
 .dark .label{color:var(--on-dark-2)}
 .h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,44px);letter-spacing:.06em;margin-top:18px;line-height:1.6}
@@ -143,7 +143,7 @@ header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:30
 
 /* gallery band */
 .band{padding:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:#000}
-@media (max-width:760px){.band{grid-template-columns:1fr}}
+@media (max-width:760px){.band{display:none}}
 
 /* team */
 .team{margin-top:56px;border-top:1px solid var(--line)}
@@ -155,12 +155,11 @@ header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:30
 
 /* news */
 .news{margin-top:48px;border-top:1px solid var(--line)}
-.news a{display:grid;grid-template-columns:140px 120px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:baseline}
-.news a:hover h3{opacity:.6}
+.news .item{display:grid;grid-template-columns:140px 120px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:baseline}
 .news time{font-family:var(--latin);font-size:12px;letter-spacing:.16em;color:var(--muted);font-variant-numeric:tabular-nums}
 .news .cat{font-family:var(--latin);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
 .news h3{font-size:15px;font-weight:300;letter-spacing:.04em;transition:opacity .25s}
-@media (max-width:640px){.news a{grid-template-columns:1fr;gap:4px}}
+@media (max-width:640px){.news .item{grid-template-columns:1fr;gap:4px}}
 
 /* contact */
 .contact{padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line-dark)}
@@ -331,7 +330,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding-block:72px 40px;fon
           <li><span class="k">Managed</span><div><b>運用は、すむすむの現場が支える</b><span>管理の現場を持つPKHOMEだからこそ、取得後の運営まで一貫して担えます。</span></div></li>
         </ul>
         <div class="feature-actions">
-          <a class="btn btn-fill" href="https://claude.ai/artifact/Rjvk4cLVbKFAV3YpJzNuj6" target="_blank" rel="noopener">Fundia サービスサイト</a>
+          <span class="btn" style="opacity:.45;pointer-events:none">Fundia サービスサイト（準備中）</span>
           <span class="fine" style="margin:0">※ 現在準備中。不動産特定共同事業の許可取得後に開始予定。</span>
         </div>
       </div>
@@ -352,13 +351,6 @@ footer{background:var(--dark);color:var(--on-dark-2);padding-block:72px 40px;fon
       <div class="app"><div class="k">AI</div><h3>内側から実装する</h3><p>外部ツールを売るのではなく、自社の業務を自社で置き換える。導入の説得も、現場の抵抗も、社内で乗り越えます。</p></div>
       <div class="app"><div class="k">M&amp;A</div><h3>承継を繰り返す</h3><p>後継者不在の管理会社は全国にあります。一社ごとに合意を重ね、同じ仕組みを移植する。積み上がるのは、管理料というストック収益です。</p></div>
     </div>
-    <div class="nums">
-      <div><b>—<small>戸</small></b><span>Units under management</span></div>
-      <div><b>—<small>社</small></b><span>Companies succeeded</span></div>
-      <div><b>—<small>%</small></b><span>Inquiries handled by AI</span></div>
-      <div><b>2026</b><span>Founded</span></div>
-    </div>
-    <p class="fine">※ 数値は事業開始後に掲載します。</p>
   </div>
 </section>
 
@@ -383,28 +375,24 @@ footer{background:var(--dark);color:var(--on-dark-2);padding-block:72px 40px;fon
   <div class="wrap">
     <div class="head-row">
       <div><div class="label">News</div><h2 class="h2">ニュース</h2></div>
-      <a class="link" href="#">All news</a>
     </div>
     <div class="news">
-      <a href="#"><time>2026.10.—</time><span class="cat">Press</span><h3>PKHOME株式会社、賃貸管理会社のAI承継事業「すむすむ」を開始</h3></a>
-      <a href="#"><time>2026.10.—</time><span class="cat">Press</span><h3>不動産クラウドファンディング「Fundia」事前登録の受付を開始</h3></a>
-      <a href="#"><time>2026.09.—</time><span class="cat">Company</span><h3>コーポレートサイトを公開しました</h3></a>
+      <div class="item"><time>2026.09.28</time><span class="cat">Company</span><h3>コーポレートサイトを公開しました</h3></div>
     </div>
-    <p class="fine">※ ニュースはサンプルです。</p>
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <a href="#">
+  <a href="mailto:info@pkhome.co.jp?subject=%E6%89%BF%E7%B6%99%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">
     <div class="k">For property management companies</div>
     <h3>管理会社の承継を<br>ご検討の方へ</h3>
     <p>後継者、人手、将来の管理品質。どの段階のご相談でも、秘密保持のうえでお受けします。</p>
     <span class="link">承継について相談する</span>
   </a>
-  <a href="#">
+  <a href="mailto:info@pkhome.co.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
     <div class="k">For investors &amp; partners</div>
     <h3>投資家・金融機関・<br>提携をご検討の方へ</h3>
-    <p>事業計画・資金調達・業務提携に関するお問い合わせはこちらから。</p>
+    <p>事業計画・資金調達・業務提携に関するお問い合わせはこちらから。<br>info@pkhome.co.jp</p>
     <span class="link">お問い合わせ</span>
   </a>
 </section>
@@ -421,8 +409,8 @@ footer{background:var(--dark);color:var(--on-dark-2);padding-block:72px 40px;fon
         <div><dt>Founded</dt><dd>2026年8月21日</dd></div>
         <div><dt>Address</dt><dd>〒150-0044　東京都渋谷区円山甹5番3号 MIEUX渋谷8階</dd></div>
         <div><dt>Board</dt><dd>代表取締役CEO　工藤 拓也<br>取締役COO　畑下 俊介<br>取締役CFO　多田 賢和<br>取締役CTO　戸村 光<br>取締役CMO　神谷 明采</dd></div>
-        <div><dt>License</dt><dd>宅地建物取引業　<span class="ph">●●県知事（1）第00000号</span><br>賃貸住宅管理業　<span class="ph">国土交通大臣（1）第000000号</span><br>不動産特定共同事業　<span class="ph">申請準備中</span></dd></div>
-        <div><dt>Contact</dt><dd>TEL：<span class="ph">03-0000-0000</span>（平日 10:00〜18:00）</dd></div>
+        <div><dt>License</dt><dd>宅地建物取引業免許・賃貸住宅管理業登録・不動産特定共同事業許可　いずれも申請準備中（取得後に掲載）</dd></div>
+        <div><dt>Contact</dt><dd>info@pkhome.co.jp</dd></div>
       </dl>
     </div>
   </div>
@@ -435,8 +423,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding-block:72px 40px;fon
         <div class="logo">PKHOME</div>
         <p style="margin-top:20px">PKHOME株式会社</p>
         <p>〒150-0044　東京都渋谷区円山甹5番3号 MIEUX渋谷8階</p>
-        <p>宅地建物取引業　●●県知事（1）第00000号</p>
-        <p>賃貸住宅管理業　国土交通大臣（1）第000000号</p>
+        <p>info@pkhome.co.jp</p>
       </div>
       <div>
         <div class="ttl">Business</div>
@@ -448,11 +435,11 @@ footer{background:var(--dark);color:var(--on-dark-2);padding-block:72px 40px;fon
       </div>
       <div>
         <div class="ttl">Legal</div>
-        <ul><li><a href="#">個人情報保護方針</a></li><li><a href="#">利用規約</a></li><li><a href="#">反社会的勢力に対する基本方針</a></li></ul>
+        <ul><li>個人情報保護方針（準備中）</li><li>利用規約（準備中）</li><li>反社会的勢力に対する基本方針（準備中）</li></ul>
       </div>
     </div>
     <div class="legal">
-      ※ 本ページはコーポレートサイトのモックです。数値・ニュース・許認可番号は仮であり、実在のものではありません。画像はプレースホルダーです。
+      ※ 各種許認可は申請準備中です。取得後、本ページに番号を掲載します。掲載画像は準備中のため仮のものです。
     </div>
     <div class="copy"><span>© 2026 PKHOME Inc.</span><span>Real Estate × AI × M&amp;A</span></div>
   </div>
