@@ -188,6 +188,22 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 .light .art .ring{border-color:rgba(0,0,0,.14)}
 .art .ring::before{content:"";position:absolute;left:50%;top:-4px;width:8px;height:8px;border-radius:50%;background:currentColor;transform:translateX(-50%)}
 @keyframes spin{to{transform:rotate(360deg)}}
+.art .plan{position:absolute;inset:0;width:100%;height:100%;color:rgba(255,255,255,.85);font-family:var(--latin)}
+.art .plan *{vector-effect:non-scaling-stroke}
+.art .plan rect,.art .plan path,.art .plan line,.art .plan circle{fill:none;stroke:currentColor;stroke-width:.8}
+.art .plan .bd{stroke-dasharray:4 4;opacity:.7}
+.art .plan .rd{opacity:.35}
+.art .plan .dc rect:first-child{stroke:none}
+.art .plan .pond{opacity:.5}
+.art .plan .link{opacity:.35}
+.art .plan .pulse{fill:#fff;stroke:none;filter:drop-shadow(0 0 4px rgba(255,255,255,.9))}
+.art .plan text{fill:currentColor;stroke:none;font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+.art .plan .nz text{font-size:10px;letter-spacing:.15em}
+.art .plan .dim{opacity:.45}.art .plan .dim text{font-size:10px;letter-spacing:.08em;text-transform:none}
+.art .plan .bess use,.art .plan .pcs,.art .plan .sub,.art .plan .dc,.art .plan .cool,.art .plan .pond,.art .plan .tx,.art .plan .wall g{opacity:0;animation:pin .9s var(--ease) forwards;animation-play-state:paused}
+.art.is-visible .plan .bess use,.art.is-visible .plan .pcs,.art.is-visible .plan .sub,.art.is-visible .plan .dc,.art.is-visible .plan .cool,.art.is-visible .plan .pond,.art.is-visible .plan .tx,.art.is-visible .plan .wall g{animation-play-state:running}
+@keyframes pin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.art .plan .pond{animation-name:pin}
 .brand-ja{font-family:var(--serif);font-size:clamp(44px,5.4vw,80px);letter-spacing:.14em;line-height:1.2;margin-top:18px}
 .brand-en{font-family:var(--latin);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-2);margin-top:10px}
 .light .brand-en{color:var(--muted)}
@@ -298,6 +314,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   .reveal,.stagger>*,.mask>span,.rise,.hero h1 .line span,.giant span{opacity:1!important;transform:none!important}
   .intro,.cursor,.grain{display:none!important}
   .statement .big .w{opacity:1!important}
+  .art .plan .bess use,.art .plan .pcs,.art .plan .sub,.art .plan .dc,.art .plan .cool,.art .plan .pond,.art .plan .tx,.art .plan .wall g{opacity:1!important}
   .hero-art *{stroke-dashoffset:0!important}
 }
 </style>
@@ -410,10 +427,84 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   <div class="wrap">
     <div class="feature">
       <div class="art reveal">
-        <div class="img" style="--c1:#3B3F45;--c2:#15171A" data-parallax="0.06"></div>
+        <div class="img" style="--c1:#2A2E34;--c2:#111214" data-parallax="0.04"></div>
+        <svg class="plan" viewBox="0 0 800 1000" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+<g class="wall">
+<rect x="110" y="200" width="580" height="620"/>
+<path d="M110 500 h580 M110 540 h580"/>
+<g style="animation-delay:0.50s">
+<rect x="110" y="200" width="145" height="300"/>
+<path d="M110 410 h145 M170 410 v90 M170 455 h85"/>
+<rect x="118" y="418" width="44" height="30" rx="8"/>
+<path d="M140 240 a30 30 0 0 1 30 30" />
+<line x1="140" y1="240" x2="140" y2="270"/>
+<rect x="180" y="208" width="60" height="4"/>
+</g>
+<g style="animation-delay:0.62s">
+<rect x="255" y="200" width="145" height="300"/>
+<path d="M255 410 h145 M315 410 v90 M315 455 h85"/>
+<rect x="263" y="418" width="44" height="30" rx="8"/>
+<path d="M285 240 a30 30 0 0 1 30 30" />
+<line x1="285" y1="240" x2="285" y2="270"/>
+<rect x="325" y="208" width="60" height="4"/>
+</g>
+<g style="animation-delay:0.74s">
+<rect x="400" y="200" width="145" height="300"/>
+<path d="M400 410 h145 M460 410 v90 M460 455 h85"/>
+<rect x="408" y="418" width="44" height="30" rx="8"/>
+<path d="M430 240 a30 30 0 0 1 30 30" />
+<line x1="430" y1="240" x2="430" y2="270"/>
+<rect x="470" y="208" width="60" height="4"/>
+</g>
+<g style="animation-delay:0.86s">
+<rect x="545" y="200" width="145" height="300"/>
+<path d="M545 410 h145 M605 410 v90 M605 455 h85"/>
+<rect x="553" y="418" width="44" height="30" rx="8"/>
+<path d="M575 240 a30 30 0 0 1 30 30" />
+<line x1="575" y1="240" x2="575" y2="270"/>
+<rect x="615" y="208" width="60" height="4"/>
+</g>
+<g style="animation-delay:0.98s">
+<rect x="110" y="540" width="145" height="280"/>
+<path d="M110 630 h145 M195 540 v90 M110 585 h85"/>
+<rect x="203" y="592" width="44" height="30" rx="8"/>
+<path d="M140 780 a30 30 0 0 0 30 -30" />
+<line x1="140" y1="780" x2="140" y2="750"/>
+<rect x="125" y="808" width="60" height="4"/>
+</g>
+<g style="animation-delay:1.10s">
+<rect x="255" y="540" width="145" height="280"/>
+<path d="M255 630 h145 M340 540 v90 M255 585 h85"/>
+<rect x="348" y="592" width="44" height="30" rx="8"/>
+<path d="M285 780 a30 30 0 0 0 30 -30" />
+<line x1="285" y1="780" x2="285" y2="750"/>
+<rect x="270" y="808" width="60" height="4"/>
+</g>
+<g style="animation-delay:1.22s">
+<rect x="400" y="540" width="145" height="280"/>
+<path d="M400 630 h145 M485 540 v90 M400 585 h85"/>
+<rect x="493" y="592" width="44" height="30" rx="8"/>
+<path d="M430 780 a30 30 0 0 0 30 -30" />
+<line x1="430" y1="780" x2="430" y2="750"/>
+<rect x="415" y="808" width="60" height="4"/>
+</g>
+<g style="animation-delay:1.34s">
+<rect x="545" y="540" width="145" height="280"/>
+<path d="M545 630 h145 M630 540 v90 M545 585 h85"/>
+<rect x="638" y="592" width="44" height="30" rx="8"/>
+<path d="M575 780 a30 30 0 0 0 30 -30" />
+<line x1="575" y1="780" x2="575" y2="750"/>
+<rect x="560" y="808" width="60" height="4"/>
+</g>
+<g style="animation-delay:1.6s"><rect x="360" y="500" width="80" height="40"/><line x1="368" y1="500" x2="368" y2="540"/><line x1="376" y1="500" x2="376" y2="540"/><line x1="384" y1="500" x2="384" y2="540"/><line x1="392" y1="500" x2="392" y2="540"/><line x1="400" y1="500" x2="400" y2="540"/><line x1="408" y1="500" x2="408" y2="540"/><line x1="416" y1="500" x2="416" y2="540"/><line x1="424" y1="500" x2="424" y2="540"/><line x1="432" y1="500" x2="432" y2="540"/></g>
+</g>
+<g class="dim"><path d="M110 170 h580 M110 165 v10 M690 165 v10"/><text x="400" y="160" text-anchor="middle">58,000</text><path d="M80 200 v620 M75 200 h10 M75 820 h10"/><text x="60" y="515" text-anchor="middle" transform="rotate(-90 60 515)">62,000</text></g>
+<path id="cor" d="M130 520 L670 520" fill="none" stroke="none"/>
+<circle class="pulse" r="3"><animateMotion dur="6s" repeatCount="indefinite" begin="2s"><mpath href="#cor"/></animateMotion></circle>
+<g class="lb"><text x="110" y="880">TYPICAL FLOOR PLAN — 8 UNITS (IMAGE)</text><text x="110" y="904">1:200</text></g>
+</svg>
         <div class="sweep" aria-hidden="true"></div>
-        <div class="ring" aria-hidden="true"></div>
-        <div class="cap">Photo — 管理会社のオフィス</div>
+        <div class="cap">承継物件の基準階平面 — イメージ</div>
       </div>
       <div>
         <div class="label">01 — Property Management</div>
@@ -466,10 +557,27 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
         </div>
       </div>
       <div class="art reveal">
-        <div class="img" style="--c1:#1B2230;--c2:#6B7684" data-parallax="0.06"></div>
-        <div class="ring" aria-hidden="true" style="right:auto;left:-25%;top:auto;bottom:-25%;animation-direction:reverse"></div>
+        <div class="img" style="--c1:#1B2230;--c2:#0F1319" data-parallax="0.04"></div>
+        <svg class="plan" viewBox="0 0 800 1000" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+<defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="currentColor" stroke-width=".6" opacity=".35"/></pattern>
+<g id="r9"><rect x="180" y="0" width="22" height="9" rx="1"/><rect x="180" y="13" width="22" height="9" rx="1"/><rect x="210" y="0" width="22" height="9" rx="1"/><rect x="210" y="13" width="22" height="9" rx="1"/><rect x="240" y="0" width="22" height="9" rx="1"/><rect x="240" y="13" width="22" height="9" rx="1"/><rect x="270" y="0" width="22" height="9" rx="1"/><rect x="270" y="13" width="22" height="9" rx="1"/><rect x="300" y="0" width="22" height="9" rx="1"/><rect x="300" y="13" width="22" height="9" rx="1"/><rect x="330" y="0" width="22" height="9" rx="1"/><rect x="330" y="13" width="22" height="9" rx="1"/><rect x="360" y="0" width="22" height="9" rx="1"/><rect x="360" y="13" width="22" height="9" rx="1"/><rect x="390" y="0" width="22" height="9" rx="1"/><rect x="390" y="13" width="22" height="9" rx="1"/><rect x="420" y="0" width="22" height="9" rx="1"/><rect x="420" y="13" width="22" height="9" rx="1"/></g><g id="r8"><rect x="180" y="0" width="22" height="9" rx="1"/><rect x="180" y="13" width="22" height="9" rx="1"/><rect x="210" y="0" width="22" height="9" rx="1"/><rect x="210" y="13" width="22" height="9" rx="1"/><rect x="240" y="0" width="22" height="9" rx="1"/><rect x="240" y="13" width="22" height="9" rx="1"/><rect x="270" y="0" width="22" height="9" rx="1"/><rect x="270" y="13" width="22" height="9" rx="1"/><rect x="300" y="0" width="22" height="9" rx="1"/><rect x="300" y="13" width="22" height="9" rx="1"/><rect x="330" y="0" width="22" height="9" rx="1"/><rect x="330" y="13" width="22" height="9" rx="1"/><rect x="360" y="0" width="22" height="9" rx="1"/><rect x="360" y="13" width="22" height="9" rx="1"/><rect x="390" y="0" width="22" height="9" rx="1"/><rect x="390" y="13" width="22" height="9" rx="1"/></g></defs>
+<path class="bd" d="M120 250 L640 190 L700 240 L700 720 L560 760 L520 820 L120 780 L90 520 Z"/>
+<path class="rd" d="M160 290 L610 236 L660 280 L660 700 L540 730 L160 740 L136 520 Z"/>
+<g class="bess"><use href="#r9" y="320" style="animation-delay:0.60s"/><use href="#r9" y="356" style="animation-delay:0.68s"/><use href="#r9" y="392" style="animation-delay:0.76s"/><use href="#r9" y="428" style="animation-delay:0.84s"/><use href="#r9" y="464" style="animation-delay:0.92s"/><use href="#r9" y="500" style="animation-delay:1.00s"/><use href="#r8" y="536" style="animation-delay:1.08s"/><use href="#r8" y="572" style="animation-delay:1.16s"/><use href="#r8" y="608" style="animation-delay:1.24s"/><use href="#r8" y="644" style="animation-delay:1.32s"/><use href="#r8" y="680" style="animation-delay:1.40s"/></g>
+<g class="pcs" style="animation-delay:1.5s"><rect x="180" y="731" width="34" height="14"/><rect x="240" y="731" width="34" height="14"/><rect x="300" y="731" width="34" height="14"/><rect x="360" y="731" width="34" height="14"/><rect x="420" y="731" width="34" height="14"/><rect x="480" y="731" width="34" height="14"/><rect x="540" y="731" width="34" height="14"/></g>
+<g class="sub" style="animation-delay:1.7s"><rect x="470" y="300" width="70" height="90"/><path d="M480 320 h50 M480 340 h50 M480 360 h50"/><circle cx="505" cy="380" r="5"/><circle cx="525" cy="380" r="5"/></g>
+<g class="dc" style="animation-delay:1.9s"><rect x="470" y="410" width="200" height="250" fill="url(#hatch)"/><rect x="470" y="410" width="200" height="250"/><path d="M470 435 H670 M470 460 H670 M470 485 H670 M470 510 H670 M470 535 H670 M470 560 H670 M470 585 H670 M470 610 H670 M470 635 H670 M570 410 V660"/></g>
+<g class="cool" style="animation-delay:2.1s"><rect x="476" y="672" width="9" height="16"/><rect x="489" y="672" width="9" height="16"/><rect x="502" y="672" width="9" height="16"/><rect x="515" y="672" width="9" height="16"/><rect x="528" y="672" width="9" height="16"/><rect x="541" y="672" width="9" height="16"/><rect x="554" y="672" width="9" height="16"/><rect x="567" y="672" width="9" height="16"/><rect x="580" y="672" width="9" height="16"/><rect x="593" y="672" width="9" height="16"/><rect x="606" y="672" width="9" height="16"/><rect x="619" y="672" width="9" height="16"/><rect x="632" y="672" width="9" height="16"/><rect x="645" y="672" width="9" height="16"/><rect x="658" y="672" width="9" height="16"/></g>
+<path class="pond" style="animation-delay:2.3s" d="M140 690 q30 -40 70 -10 q30 30 -10 55 q-50 20 -60 -45z"/>
+<g class="tx" style="animation-delay:2.4s"><path d="M700 260 L780 235 M700 300 L780 275"/><path d="M745 220 l6 40 l6 -40 M745 262 l6 40 l6 -40"/></g>
+<path id="flow1" d="M420 500 L505 500 L505 395" fill="none" stroke="none"/><path id="flow2" d="M505 395 L505 405 L560 405 L560 412" fill="none" stroke="none"/>
+<path class="link" d="M420 500 L505 500 L505 395 M505 405 L560 405 L560 412"/>
+<circle class="pulse" r="3"><animateMotion dur="3.2s" repeatCount="indefinite" begin="2.6s"><mpath href="#flow1"/></animateMotion></circle><circle class="pulse" r="3"><animateMotion dur="1.6s" repeatCount="indefinite" begin="4.2s"><mpath href="#flow2"/></animateMotion></circle>
+<g class="lb"><text x="180" y="304">BESS 300MW / 1.2GWh</text><text x="470" y="294">154kV</text><text x="470" y="700">DATA CENTER 200MW</text><text x="120" y="880">NAKA, IBARAKI — MASTER PLAN (IMAGE)</text></g>
+<g class="nz"><path d="M720 880 l10 -30 l10 30 l-10 -8z"/><text x="722" y="905">N</text><path d="M120 905 h120 M120 900 v10 M240 900 v10"/><text x="180" y="925" text-anchor="middle">200 m</text></g>
+</svg>
         <div class="sweep" aria-hidden="true"></div>
-        <div class="cap" style="color:rgba(255,255,255,.6)">Photo — 海辺のヴィラ</div>
+        <div class="cap" style="color:rgba(255,255,255,.6)">FUNDIA 1号 — 茨城那珂 300MW蓄電所・200MWデータセンター（計画図イメージ）</div>
       </div>
     </div>
   </div>
