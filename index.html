@@ -119,12 +119,12 @@ header.hide{transform:translateY(-100%)}
 .hero .btn{border-color:#fff;color:#fff;--btn-fill:#fff;--btn-hover:#0E0E0E}
 .hero .btn.fill{background:#fff;color:#0E0E0E;border-color:#fff;--btn-fill:#0E0E0E;--btn-hover:#fff}
 .hero-axes{display:flex;gap:48px;font-family:var(--latin);padding-bottom:6px}
-.hero-axes a,.hero-axes div{display:block;text-align:right}
-.hero-axes b{display:block;white-space:nowrap;font-weight:400;font-size:clamp(22px,2.2vw,30px);line-height:1.2;letter-spacing:.06em;font-family:var(--serif)}
+.hero-axes a,.hero-axes div{display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right}
+.hero-axes b{display:flex;align-items:center;height:1.25em;white-space:nowrap;font-weight:400;font-size:clamp(22px,2.2vw,30px);line-height:1;letter-spacing:.06em;font-family:var(--serif)}
 .hero-axes .en b{font-family:var(--latin);letter-spacing:.2em}
-.hero-axes span{white-space:nowrap;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.hero-axes span{display:block;margin-top:10px;white-space:nowrap;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.65)}
 .hero-axes a{transition:opacity .3s}.hero-axes a:hover{opacity:.7}
-@media (max-width:900px){.hero-axes a,.hero-axes div{text-align:left}}
+@media (max-width:900px){.hero-axes a,.hero-axes div{text-align:left;align-items:flex-start}}
 .rise{opacity:0;animation:rise 1s var(--ease) forwards}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .scroll-cue{position:absolute;left:var(--gutter);bottom:26px;display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.5);font-family:var(--latin);font-size:10px;letter-spacing:.3em;text-transform:uppercase;z-index:2}
@@ -179,7 +179,7 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 .slogo i svg{width:.78em;height:.78em;display:block}
 .slogo small{font-family:"Nunito",sans-serif;font-weight:800;font-size:.38em;letter-spacing:.16em;color:#8A93A6;margin-left:.2em;align-self:center}
 .pillar h3 .slogo{font-size:1em}
-.hero-axes b .slogo{font-size:1.25em;letter-spacing:.08em;line-height:1}
+.hero-axes b .slogo{font-size:1.15em;letter-spacing:.08em;line-height:1}
 .brand-ja .slogo{font-size:.9em;letter-spacing:.04em}
 .dark .slogo small{color:var(--on-dark-2)}
 .pillar:hover .slogo small{color:rgba(255,255,255,.7)}
