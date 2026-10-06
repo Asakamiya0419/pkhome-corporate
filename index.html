@@ -185,6 +185,7 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 
 /* feature */
 .feature{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px);align-items:center}
+.feature.solo{grid-template-columns:minmax(0,760px);justify-content:start}
 @media (max-width:900px){.feature{grid-template-columns:1fr}}
 .feature .art{aspect-ratio:4/5;position:relative;overflow:hidden;background:#1A1A1A}
 .light .feature .art{background:var(--paper)}
@@ -531,7 +532,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
       </div>
     </div>
     <div class="hero-axes rise" style="animation-delay:1.7s">
-      <a href="/sumusumu/"><b><span class="slogo"><i aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 24 24 10l16 14" fill="none" stroke="#1F2A44" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 22v16h22V22" fill="#fff" stroke="#1F2A44" stroke-width="3.5" stroke-linejoin="round"/><rect x="21" y="27" width="6" height="11" fill="#FFC83D" stroke="#1F2A44" stroke-width="3"/></svg></i>すむすむ</span></b><span>Property management</span></a>
+      <a href="/sumusumu/"><b><span class="slogo">すむすむ</span></b><span>Property management</span></a>
       <a class="en" href="https://fundia.net" target="_blank" rel="noopener"><b>FUNDIA</b><span>Real estate crowdfunding</span></a>
     </div>
   </div>
@@ -553,7 +554,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
     <div class="pillars reveal">
       <a class="pillar" href="/sumusumu/">
         <div class="art" aria-hidden="true"><svg viewBox="0 0 400 400"><rect class="f" x="60" y="120" width="280" height="220"/><path class="l" d="M60 120 H340 V340 H60 Z M60 200 H340 M60 270 H340 M150 120 V340 M250 120 V340"/><path class="l" d="M100 200 V270 M300 120 V200"/></svg></div>
-        <div><div class="kicker">01 — For owners &amp; residents</div><h3><span class="slogo"><i aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 24 24 10l16 14" fill="none" stroke="#1F2A44" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 22v16h22V22" fill="#fff" stroke="#1F2A44" stroke-width="3.5" stroke-linejoin="round"/><rect x="21" y="27" width="6" height="11" fill="#FFC83D" stroke="#1F2A44" stroke-width="3"/></svg></i>すむすむ</span></h3><div class="sub">AI-native property management</div><p>後継者不在の賃貸管理会社を引き継ぎ、AIで運営し、効率化する。</p></div>
+        <div><div class="kicker">01 — For owners &amp; residents</div><h3><span class="slogo">すむすむ</span></h3><div class="sub">AI-native property management</div><p>後継者不在の賃貸管理会社を引き継ぎ、AIで運営し、効率化する。</p></div>
         <span class="link">すむすむ 事業ページ</span>
       </a>
       <a class="pillar" href="https://fundia.net" target="_blank" rel="noopener">
@@ -567,90 +568,11 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 
 <section class="dark" id="sumusumu">
   <div class="wrap">
-    <div class="feature">
-      <div class="art reveal">
-        <div class="img" style="--c1:#2A2E34;--c2:#111214" data-parallax="0.04"></div>
-        <svg class="plan" viewBox="0 0 800 1000" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-<g class="wall">
-<rect x="110" y="200" width="580" height="620"/>
-<path d="M110 500 h580 M110 540 h580"/>
-<g style="animation-delay:0.50s">
-<rect x="110" y="200" width="145" height="300"/>
-<path d="M110 410 h145 M170 410 v90 M170 455 h85"/>
-<rect x="118" y="418" width="44" height="30" rx="8"/>
-<path d="M140 240 a30 30 0 0 1 30 30" />
-<line x1="140" y1="240" x2="140" y2="270"/>
-<rect x="180" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.62s">
-<rect x="255" y="200" width="145" height="300"/>
-<path d="M255 410 h145 M315 410 v90 M315 455 h85"/>
-<rect x="263" y="418" width="44" height="30" rx="8"/>
-<path d="M285 240 a30 30 0 0 1 30 30" />
-<line x1="285" y1="240" x2="285" y2="270"/>
-<rect x="325" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.74s">
-<rect x="400" y="200" width="145" height="300"/>
-<path d="M400 410 h145 M460 410 v90 M460 455 h85"/>
-<rect x="408" y="418" width="44" height="30" rx="8"/>
-<path d="M430 240 a30 30 0 0 1 30 30" />
-<line x1="430" y1="240" x2="430" y2="270"/>
-<rect x="470" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.86s">
-<rect x="545" y="200" width="145" height="300"/>
-<path d="M545 410 h145 M605 410 v90 M605 455 h85"/>
-<rect x="553" y="418" width="44" height="30" rx="8"/>
-<path d="M575 240 a30 30 0 0 1 30 30" />
-<line x1="575" y1="240" x2="575" y2="270"/>
-<rect x="615" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.98s">
-<rect x="110" y="540" width="145" height="280"/>
-<path d="M110 630 h145 M195 540 v90 M110 585 h85"/>
-<rect x="203" y="592" width="44" height="30" rx="8"/>
-<path d="M140 780 a30 30 0 0 0 30 -30" />
-<line x1="140" y1="780" x2="140" y2="750"/>
-<rect x="125" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.10s">
-<rect x="255" y="540" width="145" height="280"/>
-<path d="M255 630 h145 M340 540 v90 M255 585 h85"/>
-<rect x="348" y="592" width="44" height="30" rx="8"/>
-<path d="M285 780 a30 30 0 0 0 30 -30" />
-<line x1="285" y1="780" x2="285" y2="750"/>
-<rect x="270" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.22s">
-<rect x="400" y="540" width="145" height="280"/>
-<path d="M400 630 h145 M485 540 v90 M400 585 h85"/>
-<rect x="493" y="592" width="44" height="30" rx="8"/>
-<path d="M430 780 a30 30 0 0 0 30 -30" />
-<line x1="430" y1="780" x2="430" y2="750"/>
-<rect x="415" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.34s">
-<rect x="545" y="540" width="145" height="280"/>
-<path d="M545 630 h145 M630 540 v90 M545 585 h85"/>
-<rect x="638" y="592" width="44" height="30" rx="8"/>
-<path d="M575 780 a30 30 0 0 0 30 -30" />
-<line x1="575" y1="780" x2="575" y2="750"/>
-<rect x="560" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.6s"><rect x="360" y="500" width="80" height="40"/><line x1="368" y1="500" x2="368" y2="540"/><line x1="376" y1="500" x2="376" y2="540"/><line x1="384" y1="500" x2="384" y2="540"/><line x1="392" y1="500" x2="392" y2="540"/><line x1="400" y1="500" x2="400" y2="540"/><line x1="408" y1="500" x2="408" y2="540"/><line x1="416" y1="500" x2="416" y2="540"/><line x1="424" y1="500" x2="424" y2="540"/><line x1="432" y1="500" x2="432" y2="540"/></g>
-</g>
-<g class="dim"><path d="M110 170 h580 M110 165 v10 M690 165 v10"/><text x="400" y="160" text-anchor="middle">58,000</text><path d="M80 200 v620 M75 200 h10 M75 820 h10"/><text x="60" y="515" text-anchor="middle" transform="rotate(-90 60 515)">62,000</text></g>
-<path id="cor" d="M130 520 L670 520" fill="none" stroke="none"/>
-<circle class="pulse" r="3"><animateMotion dur="6s" repeatCount="indefinite" begin="2s"><mpath href="#cor"/></animateMotion></circle>
-<g class="lb"><text x="110" y="880">TYPICAL FLOOR PLAN — 8 UNITS (IMAGE)</text><text x="110" y="904">1:200</text></g>
-</svg>
-        <div class="sweep" aria-hidden="true"></div>
-        <div class="cap">承継物件の基準階平面 — イメージ</div>
-      </div>
+    <div class="feature solo">
+      
       <div>
         <div class="label">01 — Property Management</div>
-        <div class="brand-ja mask reveal-h"><span><span class="slogo"><i aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 24 24 10l16 14" fill="none" stroke="#1F2A44" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 22v16h22V22" fill="#fff" stroke="#1F2A44" stroke-width="3.5" stroke-linejoin="round"/><rect x="21" y="27" width="6" height="11" fill="#FFC83D" stroke="#1F2A44" stroke-width="3"/></svg></i>すむすむ<small>by PKHOME</small></span></span></div>
+        <div class="brand-ja mask reveal-h"><span><span class="slogo">すむすむ<small>by PKHOME</small></span></span></div>
         <div class="brand-en">AI-native property management</div>
         <p class="lead reveal">管理会社を引き継ぎ、AIが運営し、効率化する。</p>
         <ul class="points stagger">
