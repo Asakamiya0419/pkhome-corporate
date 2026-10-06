@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="PKHOME株式会社 — 最新のAIで住まいの当たり前を更新する不動産テック企業。賃貸管理のAI運営「すむすむ」、不動産クラウドファンディング「FUNDIA」。">
+<meta name="description" content="すむすむ — 後継者不在の賃貸管理会社を承継し、AIで運営する。PKHOME株式会社の賃貸管理事業。管理会社の承継、オーナー・入居者へのメリット、AI運営の仕組み、承継の進め方。">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#0E0E0E">
-<title>PKHOME</title>
+<title>すむすむ | AI-native property management — PKHOME</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;500&family=Instrument+Serif:ital@0;1&family=Jost:wght@400;500&display=swap">
 <style>
@@ -46,7 +46,6 @@ h1,h2,h3{margin:0;font-weight:400;line-height:1.4}
 .btn:hover::before{transform:translateY(0)}
 .btn:hover{color:var(--btn-hover)}
 .dark .btn{--btn-fill:var(--on-dark);--btn-hover:var(--dark)}
-.dark .feature-actions .btn+.btn{opacity:.75}.dark .feature-actions .btn+.btn:hover{opacity:1}
 .btn.fill{background:var(--ink);color:#fff;border-color:var(--ink);--btn-fill:#fff;--btn-hover:var(--ink)}
 :focus-visible{outline:2px solid var(--muted);outline-offset:3px}
 
@@ -136,7 +135,7 @@ header.hide{transform:translateY(-100%)}
 .marquee{overflow:hidden;border-block:1px solid var(--line);padding:22px 0;background:var(--bg)}
 .marquee .track{display:flex;gap:0;white-space:nowrap;width:max-content;animation:mq 60s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
-.marquee span{font-family:var(--latin);font-size:clamp(16px,1.9vw,24px);letter-spacing:.12em;padding:0 40px;display:inline-flex;align-items:center;gap:40px;color:var(--ink)}
+.marquee span{font-family:var(--serif);font-size:clamp(18px,2.2vw,28px);letter-spacing:.14em;padding:0 40px;display:inline-flex;align-items:center;gap:40px;color:var(--ink)}
 .marquee span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink);opacity:.35}
 .marquee em{font-family:var(--display);font-style:italic;letter-spacing:.02em}
 @keyframes mq{to{transform:translateX(-50%)}}
@@ -345,7 +344,7 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 .decide .on li::before{content:"";position:absolute;left:0;top:.95em;width:10px;height:10px;border-radius:50%;border:1px solid var(--ink);transform:translateY(-50%)}
 
 /* faq */
-.faqs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:72px}
+.faqs{display:grid;grid-template-columns:repeat(2,1fr);max-width:1040px;gap:clamp(24px,4vw,56px);margin-top:72px}
 @media (max-width:900px){.faqs{grid-template-columns:1fr;gap:40px}}
 .faqs .k{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);padding-bottom:16px;border-bottom:1px solid var(--ink)}
 .faqs details{border-bottom:1px solid var(--line)}
@@ -434,7 +433,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 .foot p{margin:0 0 6px}
 .legal{margin-top:56px;padding-top:24px;border-top:1px solid var(--line-dark);font-size:11px;line-height:1.9;color:var(--muted)}
 .copy{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:24px;font-family:var(--latin);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.giant{font-family:var(--latin);font-weight:500;font-size:clamp(72px,16.5vw,300px);letter-spacing:.04em;line-height:.78;white-space:nowrap;color:var(--on-dark);text-align:center;margin-top:64px;transform:translateY(14%);opacity:.95;user-select:none}
+.giant{font-family:var(--latin);font-weight:500;font-size:clamp(56px,12.5vw,230px);letter-spacing:.04em;line-height:.78;white-space:nowrap;color:var(--on-dark);text-align:center;margin-top:64px;transform:translateY(14%);opacity:.95;user-select:none}
 .giant span{display:inline-block;transform:translateY(40%);transition:transform 1.4s var(--ease)}
 .giant.is-visible span{transform:translateY(0)}
 .giant span:nth-child(2){transition-delay:.05s}.giant span:nth-child(3){transition-delay:.1s}.giant span:nth-child(4){transition-delay:.15s}.giant span:nth-child(5){transition-delay:.2s}.giant span:nth-child(6){transition-delay:.25s}
@@ -460,24 +459,26 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   .who .turn::after{transform:none!important}
   .who,.loop,.decide{background:var(--line)!important}
 }
+.logo.ja{font-family:var(--serif);letter-spacing:.22em;font-size:20px}.logo.ja small{font-family:var(--latin);font-size:10px;letter-spacing:.3em;opacity:.7;margin-left:6px}
+.hero .lead-stats{display:flex;gap:40px;margin-top:40px;flex-wrap:wrap}.hero .lead-stats b{display:block;font-family:var(--display);font-size:clamp(34px,3.6vw,52px);line-height:1;letter-spacing:-.01em}.hero .lead-stats span{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:8px;font-family:var(--latin)}
 </style>
 </head>
 <body>
 
-<div class="intro" id="intro" aria-hidden="true"><div class="word"><span style="animation-delay:.05s">P</span><span style="animation-delay:.1s">K</span><span style="animation-delay:.15s">H</span><span style="animation-delay:.2s">O</span><span style="animation-delay:.25s">M</span><span style="animation-delay:.3s">E</span></div></div>
+<div class="intro" id="intro" aria-hidden="true"><div class="word" style="font-family:var(--serif);letter-spacing:.3em;text-transform:none"><span style="animation-delay:.05s">す</span><span style="animation-delay:.1s">む</span><span style="animation-delay:.15s">す</span><span style="animation-delay:.2s">む</span></div></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <header id="header">
   <div class="wrap nav">
-    <a class="logo" href="#top"><i></i>PKHOME</a>
+    <a class="logo ja" href="/sumusumu/"><i></i>すむすむ<small>by PKHOME</small></a>
     <ul>
-      <li><a href="#business">Business</a></li>
-      <li><a href="/sumusumu/">すむすむ</a></li>
-      <li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#company">Company</a></li>
+      <li><a href="#forwhom">For whom</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#model">Model</a></li>
+      <li><a href="#succession">Succession</a></li>
+      <li><a href="/">PKHOME ↗</a></li>
     </ul>
     <div class="nav-r">
       <span class="clock" id="clock" aria-label="Tokyo time">TOKYO 00:00</span>
@@ -509,20 +510,21 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   </svg>
   <div class="wrap hero-in">
     <div>
-      <div class="label rise" style="animation-delay:.9s">Real Estate × Finance</div>
+      <div class="label rise" style="animation-delay:.9s">すむすむ — AI-native property management</div>
       <h1>
-        <span class="line"><span>住まいの当たり前を、</span></span>
-        <span class="line"><span><em>更新</em>する。</span></span>
+        <span class="line"><span>管理会社を引き継ぎ、</span></span>
+        <span class="line"><span>AIで<em>運営</em>する。</span></span>
       </h1>
-      <p class="rise" style="animation-delay:1.3s">PKHOMEは、最新のAIで住まいの当たり前を更新する不動産テック企業です。賃貸管理会社をAIで運営する「すむすむ」と、一口五万円からの不動産投資「FUNDIA」。日々の業務をAIに置き換え、人は人にしかできない仕事へ。</p>
+      <p class="rise" style="animation-delay:1.3s">後継者不在の賃貸管理会社を承継し、受付・事務・修繕手配をAIに置き換える。オーナーには見える管理と手残りを、入居者には夜間・休日も届く応対を、現場には本来の仕事の時間を。</p>
       <div class="hero-actions rise" style="animation-delay:1.5s">
-        <a class="btn fill" href="#business" data-magnet><span>事業を見る</span></a>
-        <a class="btn" href="#contact" data-magnet><span>お問い合わせ</span></a>
+        <a class="btn fill" href="#contact" data-magnet><span>承継のご相談</span></a>
+        <a class="btn" href="#forwhom" data-magnet><span>オーナー・入居者の方へ</span></a>
       </div>
     </div>
     <div class="hero-axes rise" style="animation-delay:1.7s">
-      <a href="/sumusumu/"><b>すむすむ</b><span>Property management</span></a>
-      <a class="en" href="https://fundia.net" target="_blank" rel="noopener"><b>FUNDIA</b><span>Real estate crowdfunding</span></a>
+      <div><b>承継</b><span>Succession</span></div>
+      <div><b>AI運営</b><span>AI-native ops</span></div>
+      <div><b>効率化</b><span>Efficiency</span></div>
     </div>
   </div>
   <div class="scroll-cue"><i></i>Scroll</div>
@@ -530,209 +532,218 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 
 <div class="marquee" aria-hidden="true">
   <div class="track" id="mq">
-    <span>Property management, <em>re-engineered</em></span><span>AI-native <em>operations</em></span><span>Succession of <em>local agencies</em></span><span>FUNDIA — <em>from ¥50,000</em></span><span>Real Estate × <em>Finance</em></span>
+    <span>Succession of <em>local agencies</em></span><span>AI-native <em>operations</em></span><span>Owners · Residents · <em>Staff</em></span><span>Buy · Fix · <em>Scale</em></span><span>すむすむ by <em>PKHOME</em></span>
   </div>
 </div>
 
-<section id="business" class="paper">
+<section id="forwhom" class="paper">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">01</div><div class="label" style="margin-top:16px">Business</div></div>
-      <div><h2 class="h2 mask reveal-h"><span>ふたつの事業</span></h2><p class="lead reveal">運営する側と、投資する側。不動産の両端に、PKHOMEは立ちます。</p></div>
+      <div><div class="num" aria-hidden="true">01</div><div class="label" style="margin-top:16px">For whom</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>三者の毎日が、こう変わる。</span></h2><p class="lead reveal">管理会社、物件オーナー、入居者。三者それぞれの「困りごと」から、すむすむは設計しています。</p></div>
     </div>
-    <div class="pillars reveal">
-      <a class="pillar" href="/sumusumu/">
-        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 400"><rect class="f" x="60" y="120" width="280" height="220"/><path class="l" d="M60 120 H340 V340 H60 Z M60 200 H340 M60 270 H340 M150 120 V340 M250 120 V340"/><path class="l" d="M100 200 V270 M300 120 V200"/></svg></div>
-        <div><div class="kicker">01 — For owners &amp; residents</div><h3>すむすむ</h3><div class="sub">AI-native property management</div><p>後継者不在の賃貸管理会社を引き継ぎ、AIで運営し、効率化する。</p></div>
-        <span class="link">すむすむ 事業ページ</span>
-      </a>
-      <a class="pillar" href="https://fundia.net" target="_blank" rel="noopener">
-        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 400"><circle class="f" cx="220" cy="200" r="140"/><circle class="l" cx="220" cy="200" r="140"/><circle class="l" cx="220" cy="200" r="100"/><circle class="l" cx="220" cy="200" r="60"/><path class="l" d="M220 60 V340 M80 200 H360"/></svg></div>
-        <div><div class="kicker">02 — For investors</div><h3 class="en">FUNDIA</h3><div class="sub">Real estate crowdfunding</div><p>厳選した不動産に、一口五万円から。優先劣後方式で運営会社も同じファンドにリスクを負う、個人投資家のための不動産クラウドファンディングです。</p></div>
-        <span class="link">Visit fundia.net</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="dark" id="sumusumu">
-  <div class="wrap">
-    <div class="feature">
-      <div class="art reveal">
-        <div class="img" style="--c1:#2A2E34;--c2:#111214" data-parallax="0.04"></div>
-        <svg class="plan" viewBox="0 0 800 1000" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-<g class="wall">
-<rect x="110" y="200" width="580" height="620"/>
-<path d="M110 500 h580 M110 540 h580"/>
-<g style="animation-delay:0.50s">
-<rect x="110" y="200" width="145" height="300"/>
-<path d="M110 410 h145 M170 410 v90 M170 455 h85"/>
-<rect x="118" y="418" width="44" height="30" rx="8"/>
-<path d="M140 240 a30 30 0 0 1 30 30" />
-<line x1="140" y1="240" x2="140" y2="270"/>
-<rect x="180" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.62s">
-<rect x="255" y="200" width="145" height="300"/>
-<path d="M255 410 h145 M315 410 v90 M315 455 h85"/>
-<rect x="263" y="418" width="44" height="30" rx="8"/>
-<path d="M285 240 a30 30 0 0 1 30 30" />
-<line x1="285" y1="240" x2="285" y2="270"/>
-<rect x="325" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.74s">
-<rect x="400" y="200" width="145" height="300"/>
-<path d="M400 410 h145 M460 410 v90 M460 455 h85"/>
-<rect x="408" y="418" width="44" height="30" rx="8"/>
-<path d="M430 240 a30 30 0 0 1 30 30" />
-<line x1="430" y1="240" x2="430" y2="270"/>
-<rect x="470" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.86s">
-<rect x="545" y="200" width="145" height="300"/>
-<path d="M545 410 h145 M605 410 v90 M605 455 h85"/>
-<rect x="553" y="418" width="44" height="30" rx="8"/>
-<path d="M575 240 a30 30 0 0 1 30 30" />
-<line x1="575" y1="240" x2="575" y2="270"/>
-<rect x="615" y="208" width="60" height="4"/>
-</g>
-<g style="animation-delay:0.98s">
-<rect x="110" y="540" width="145" height="280"/>
-<path d="M110 630 h145 M195 540 v90 M110 585 h85"/>
-<rect x="203" y="592" width="44" height="30" rx="8"/>
-<path d="M140 780 a30 30 0 0 0 30 -30" />
-<line x1="140" y1="780" x2="140" y2="750"/>
-<rect x="125" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.10s">
-<rect x="255" y="540" width="145" height="280"/>
-<path d="M255 630 h145 M340 540 v90 M255 585 h85"/>
-<rect x="348" y="592" width="44" height="30" rx="8"/>
-<path d="M285 780 a30 30 0 0 0 30 -30" />
-<line x1="285" y1="780" x2="285" y2="750"/>
-<rect x="270" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.22s">
-<rect x="400" y="540" width="145" height="280"/>
-<path d="M400 630 h145 M485 540 v90 M400 585 h85"/>
-<rect x="493" y="592" width="44" height="30" rx="8"/>
-<path d="M430 780 a30 30 0 0 0 30 -30" />
-<line x1="430" y1="780" x2="430" y2="750"/>
-<rect x="415" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.34s">
-<rect x="545" y="540" width="145" height="280"/>
-<path d="M545 630 h145 M630 540 v90 M545 585 h85"/>
-<rect x="638" y="592" width="44" height="30" rx="8"/>
-<path d="M575 780 a30 30 0 0 0 30 -30" />
-<line x1="575" y1="780" x2="575" y2="750"/>
-<rect x="560" y="808" width="60" height="4"/>
-</g>
-<g style="animation-delay:1.6s"><rect x="360" y="500" width="80" height="40"/><line x1="368" y1="500" x2="368" y2="540"/><line x1="376" y1="500" x2="376" y2="540"/><line x1="384" y1="500" x2="384" y2="540"/><line x1="392" y1="500" x2="392" y2="540"/><line x1="400" y1="500" x2="400" y2="540"/><line x1="408" y1="500" x2="408" y2="540"/><line x1="416" y1="500" x2="416" y2="540"/><line x1="424" y1="500" x2="424" y2="540"/><line x1="432" y1="500" x2="432" y2="540"/></g>
-</g>
-<g class="dim"><path d="M110 170 h580 M110 165 v10 M690 165 v10"/><text x="400" y="160" text-anchor="middle">58,000</text><path d="M80 200 v620 M75 200 h10 M75 820 h10"/><text x="60" y="515" text-anchor="middle" transform="rotate(-90 60 515)">62,000</text></g>
-<path id="cor" d="M130 520 L670 520" fill="none" stroke="none"/>
-<circle class="pulse" r="3"><animateMotion dur="6s" repeatCount="indefinite" begin="2s"><mpath href="#cor"/></animateMotion></circle>
-<g class="lb"><text x="110" y="880">TYPICAL FLOOR PLAN — 8 UNITS (IMAGE)</text><text x="110" y="904">1:200</text></g>
-</svg>
-        <div class="sweep" aria-hidden="true"></div>
-        <div class="cap">承継物件の基準階平面 — イメージ</div>
+    <div class="who stagger">
+      <div>
+        <i class="n" aria-hidden="true">01</i>
+        <div class="k">For management companies</div>
+        <h3>会社を途切れさせず、<br>次へ渡す。</h3>
+        <div class="ttl">いま</div>
+        <ul class="now">
+          <li>業務が属人化し、引き継げない</li>
+          <li>手作業が多く、人件費の負担が重い</li>
+          <li>後継者がいない</li>
+        </ul>
+        <div class="turn">then</div>
+        <ul class="then">
+          <li><b>社名・従業員・管理契約をそのまま承継</b></li>
+          <li><b>定型業務をAIが肩代わり</b></li>
+          <li><b>残る人の仕事が、軽くなる</b></li>
+        </ul>
       </div>
       <div>
-        <div class="label">01 — Property Management</div>
-        <div class="brand-ja mask reveal-h"><span>すむすむ</span></div>
-        <div class="brand-en">AI-native property management</div>
-        <p class="lead reveal">管理会社を引き継ぎ、AIが運営し、効率化する。</p>
-        <ul class="points stagger">
-          <li><div><b>管理会社を、承継で引き継ぐ</b><span>社名・スタッフ・管理契約はそのまま。関係を途切れさせません。</span></div></li>
-          <li><div><b>問い合わせから送金まで、AIが運営</b><span>一次対応、契約書類、入金照合と督促を自動化します。</span></div></li>
-          <li><div><b>人の仕事は、判断と対面に</b><span>緊急判断、発注承認、交渉。人にしかできないことに集中します。</span></div></li>
+        <i class="n" aria-hidden="true">02</i>
+        <div class="k">For property owners</div>
+        <h3>見える管理と、<br>手残りの改善。</h3>
+        <div class="ttl">いま</div>
+        <ul class="now">
+          <li>管理料・手数料の負担感</li>
+          <li>物件の状況が見えにくい</li>
+          <li>トラブルのたびに連絡と判断の手間</li>
         </ul>
-        <div class="feature-actions"><a class="btn" href="/sumusumu/" data-magnet><span>すむすむ 事業ページ</span></a><a class="btn" href="#contact" data-magnet><span>承継のご相談</span></a></div>
+        <div class="turn">then</div>
+        <ul class="then">
+          <li><b>管理状況が、いつでも見える</b></li>
+          <li><b>トラブル対応は、仕組みで進む</b></li>
+          <li><b>効率化の成果を、品質と手残りに</b></li>
+        </ul>
+      </div>
+      <div>
+        <i class="n" aria-hidden="true">03</i>
+        <div class="k">For residents</div>
+        <h3>夜でも、週末でも、<br>まず届く。</h3>
+        <div class="ttl">いま</div>
+        <ul class="now">
+          <li>問い合わせや修繕の対応が遅い</li>
+          <li>土日・夜間は、そもそも連絡がつかない</li>
+          <li>入居手続きの書類が多く、煩雑</li>
+        </ul>
+        <div class="turn">then</div>
+        <ul class="then">
+          <li><b>夜間・休日も、まず受け付ける</b></li>
+          <li><b>修繕の進捗が、わかる</b></li>
+          <li><b>申込みから契約まで、オンラインで</b></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="light" id="fundia">
+<section class="dark" id="technology">
   <div class="wrap">
-    <div class="feature">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">02</div><div class="label" style="margin-top:16px">Technology</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>土曜日の夜、漏水の連絡が来たら。</span></h2><p class="lead reveal">AIが整理し、確認し、手配を進め、人は判断にだけ集中する。すむすむの現場は、こう動きます。</p></div>
+    </div>
+    <div class="scn-h reveal">Scenario — 入居者からの緊急連絡</div>
+    <div class="scn stagger" id="scn">
+      <div class="trig">
+        <div class="k"><span>Incoming</span><i>土</i></div>
+        <div class="msg">天井から水が落ちてきています。どうすればいいですか？</div>
+        <div class="meta"><span>SAT 21:04</span><span>Resident</span></div>
+        <div class="hint">これまでなら、月曜の朝まで誰にもつながらなかった連絡。</div>
+      </div>
       <div>
-        <div class="label">02 — Real Estate Crowdfunding</div>
-        <div class="brand-ja mask reveal-h" style="font-family:var(--latin);letter-spacing:.22em"><span>FUNDIA</span></div>
-        <div class="brand-en">Real estate crowdfunding</div>
-        <p class="lead reveal">所有しなくても、一等地のオーナーになれる。FUNDIAは、都市の不動産や再生可能エネルギーのインフラに、一口五万円から出資できる不動産クラウドファンディングです。物件の取得から運用、売却までを専門家が担い、投資家は分配金を受け取るだけ。</p>
-        <ul class="points stagger">
-          <li><div><b>一口五万円から、オンラインで完結</b><span>会員登録から本人確認、出資、分配金の受け取りまで、すべてスマートフォンで。</span></div></li>
-          <li><div><b>優先劣後方式</b><span>運営会社が劣後出資者として同じファンドに出資。損失はまず運営会社の出資分から負担します。</span></div></li>
-          <li><div><b>運用は、すむすむの現場が支える</b><span>管理の現場を持つPKHOMEだからこそ、取得後の運営まで一貫して担えます。</span></div></li>
-        </ul>
-        <div class="feature-actions">
-          <a class="btn" href="https://fundia.net" target="_blank" rel="noopener" data-magnet><span>FUNDIA サービスサイト</span></a>
-          <span class="fine">※ ファンドの募集は不動産特定共同事業の許可取得後に開始します。</span>
+        <div class="k"><span>AI</span><i>01</i></div>
+        <h3>連絡の整理</h3>
+        <p>内容と緊急度を判定し、写真や状況を聞き取って案件として起票。入居者には「受け付けました」と次の動きをすぐ返します。</p>
+        <ul><li>緊急度の判定</li><li>状況・写真の聞き取り</li><li>案件の起票と入居者への一次返信</li></ul>
+      </div>
+      <div>
+        <div class="k"><span>AI</span><i>02</i></div>
+        <h3>物件・契約の確認</h3>
+        <p>該当住戸の設備、契約内容、保険や保証の範囲、過去の修繕履歴を照合。上階住戸への影響も含めて、対応の前提を揃えます。</p>
+        <ul><li>設備・契約・保証範囲の照合</li><li>修繕履歴と関連住戸の確認</li><li>費用負担の整理</li></ul>
+      </div>
+      <div>
+        <div class="k"><span>AI</span><i>03</i></div>
+        <h3>業者への連絡と進捗管理</h3>
+        <p>協力会社へ手配し、訪問日程を調整。入居者とオーナーには進捗を共有し、完了まで案件を追い続けます。</p>
+        <ul><li>協力会社への手配・日程調整</li><li>入居者・オーナーへの進捗共有</li><li>完了確認と対応履歴の記録</li></ul>
+      </div>
+      <div class="human">
+        <div class="k"><span>Human</span><i>人</i></div>
+        <h3>人が、判断する</h3>
+        <p>止水や避難が必要な緊急判断、発注の承認、費用をめぐる交渉。AIが前提を揃えたうえで、人は判断にだけ時間を使います。</p>
+        <ul><li>緊急時の判断</li><li>発注の承認</li><li>交渉・対面の対応</li></ul>
+      </div>
+    </div>
+    <div class="scope stagger">
+      <div>
+        <div class="k">Before move-in</div>
+        <h3>入居前</h3>
+        <ul><li>問い合わせへの対応</li><li>申込み・契約書の処理</li><li>必要情報の確認</li><li class="hm">入居審査の最終判断</li></ul>
+      </div>
+      <div>
+        <div class="k">During tenancy</div>
+        <h3>入居中</h3>
+        <ul><li>土日・夜間の受付</li><li>修繕の手配と進捗管理</li><li>対応履歴の共有</li><li class="hm">緊急判断・発注承認</li></ul>
+      </div>
+      <div>
+        <div class="k">Back office</div>
+        <h3>管理事務</h3>
+        <ul><li>入金の照合</li><li>オーナーへの報告</li><li>更新・解約の事務</li><li class="hm">オーナーとの交渉・提案</li></ul>
+      </div>
+    </div>
+    <div class="scope" style="display:block;border:0;padding:0;margin-top:0"><div class="note reveal"><span><i>AI</i>AIが担う業務</span><span><i class="hm">人</i>人が判断・承認する業務</span></div></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">03</div><div class="label" style="margin-top:16px">Business model</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>買って、直して、増やす。</span></h2><p class="lead reveal">収益は、毎月入る管理料。承継で戸数を買い、AIで原価を下げ、その安定収益を担保に次の承継へ。英国Dwellyが2年で証明したループです。</p></div>
+    </div>
+
+    <div class="eq reveal">
+      <div class="eq-row">
+        <div class="lhs">売上<small>Revenue</small></div>
+        <div class="eq-terms">
+          <div class="term main"><div class="k"><span>Units</span><i class="up">▲ 増</i></div><b>管理戸数</b><span>承継で一度に数百〜数千戸。新規受託で積み増す。</span></div>
+          <div class="op" aria-hidden="true">×</div>
+          <div class="term main"><div class="k"><span>Revenue / unit / year</span></div><b>一戸あたり年間売上</b><span>管理料 約3.6万円／年（家賃6万円×5%×12カ月）＋ 仲介料・更新料。</span></div>
         </div>
       </div>
-      <div class="art reveal">
-        <div class="img" style="--c1:#1B2230;--c2:#0F1319" data-parallax="0.04"></div>
-        <svg class="plan" viewBox="0 0 800 1000" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-<defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="currentColor" stroke-width=".6" opacity=".35"/></pattern>
-<g id="r9"><rect x="180" y="0" width="22" height="9" rx="1"/><rect x="180" y="13" width="22" height="9" rx="1"/><rect x="210" y="0" width="22" height="9" rx="1"/><rect x="210" y="13" width="22" height="9" rx="1"/><rect x="240" y="0" width="22" height="9" rx="1"/><rect x="240" y="13" width="22" height="9" rx="1"/><rect x="270" y="0" width="22" height="9" rx="1"/><rect x="270" y="13" width="22" height="9" rx="1"/><rect x="300" y="0" width="22" height="9" rx="1"/><rect x="300" y="13" width="22" height="9" rx="1"/><rect x="330" y="0" width="22" height="9" rx="1"/><rect x="330" y="13" width="22" height="9" rx="1"/><rect x="360" y="0" width="22" height="9" rx="1"/><rect x="360" y="13" width="22" height="9" rx="1"/><rect x="390" y="0" width="22" height="9" rx="1"/><rect x="390" y="13" width="22" height="9" rx="1"/><rect x="420" y="0" width="22" height="9" rx="1"/><rect x="420" y="13" width="22" height="9" rx="1"/></g><g id="r8"><rect x="180" y="0" width="22" height="9" rx="1"/><rect x="180" y="13" width="22" height="9" rx="1"/><rect x="210" y="0" width="22" height="9" rx="1"/><rect x="210" y="13" width="22" height="9" rx="1"/><rect x="240" y="0" width="22" height="9" rx="1"/><rect x="240" y="13" width="22" height="9" rx="1"/><rect x="270" y="0" width="22" height="9" rx="1"/><rect x="270" y="13" width="22" height="9" rx="1"/><rect x="300" y="0" width="22" height="9" rx="1"/><rect x="300" y="13" width="22" height="9" rx="1"/><rect x="330" y="0" width="22" height="9" rx="1"/><rect x="330" y="13" width="22" height="9" rx="1"/><rect x="360" y="0" width="22" height="9" rx="1"/><rect x="360" y="13" width="22" height="9" rx="1"/><rect x="390" y="0" width="22" height="9" rx="1"/><rect x="390" y="13" width="22" height="9" rx="1"/></g></defs>
-<path class="bd" d="M120 250 L640 190 L700 240 L700 720 L560 760 L520 820 L120 780 L90 520 Z"/>
-<path class="rd" d="M160 290 L610 236 L660 280 L660 700 L540 730 L160 740 L136 520 Z"/>
-<g class="bess"><use href="#r9" y="320" style="animation-delay:0.60s"/><use href="#r9" y="356" style="animation-delay:0.68s"/><use href="#r9" y="392" style="animation-delay:0.76s"/><use href="#r9" y="428" style="animation-delay:0.84s"/><use href="#r9" y="464" style="animation-delay:0.92s"/><use href="#r9" y="500" style="animation-delay:1.00s"/><use href="#r8" y="536" style="animation-delay:1.08s"/><use href="#r8" y="572" style="animation-delay:1.16s"/><use href="#r8" y="608" style="animation-delay:1.24s"/><use href="#r8" y="644" style="animation-delay:1.32s"/><use href="#r8" y="680" style="animation-delay:1.40s"/></g>
-<g class="pcs" style="animation-delay:1.5s"><rect x="180" y="731" width="34" height="14"/><rect x="240" y="731" width="34" height="14"/><rect x="300" y="731" width="34" height="14"/><rect x="360" y="731" width="34" height="14"/><rect x="420" y="731" width="34" height="14"/><rect x="480" y="731" width="34" height="14"/><rect x="540" y="731" width="34" height="14"/></g>
-<g class="sub" style="animation-delay:1.7s"><rect x="470" y="300" width="70" height="90"/><path d="M480 320 h50 M480 340 h50 M480 360 h50"/><circle cx="505" cy="380" r="5"/><circle cx="525" cy="380" r="5"/></g>
-<g class="dc" style="animation-delay:1.9s"><rect x="470" y="410" width="200" height="250" fill="url(#hatch)"/><rect x="470" y="410" width="200" height="250"/><path d="M470 435 H670 M470 460 H670 M470 485 H670 M470 510 H670 M470 535 H670 M470 560 H670 M470 585 H670 M470 610 H670 M470 635 H670 M570 410 V660"/></g>
-<g class="cool" style="animation-delay:2.1s"><rect x="476" y="672" width="9" height="16"/><rect x="489" y="672" width="9" height="16"/><rect x="502" y="672" width="9" height="16"/><rect x="515" y="672" width="9" height="16"/><rect x="528" y="672" width="9" height="16"/><rect x="541" y="672" width="9" height="16"/><rect x="554" y="672" width="9" height="16"/><rect x="567" y="672" width="9" height="16"/><rect x="580" y="672" width="9" height="16"/><rect x="593" y="672" width="9" height="16"/><rect x="606" y="672" width="9" height="16"/><rect x="619" y="672" width="9" height="16"/><rect x="632" y="672" width="9" height="16"/><rect x="645" y="672" width="9" height="16"/><rect x="658" y="672" width="9" height="16"/></g>
-<path class="pond" style="animation-delay:2.3s" d="M140 690 q30 -40 70 -10 q30 30 -10 55 q-50 20 -60 -45z"/>
-<g class="tx" style="animation-delay:2.4s"><path d="M700 260 L780 235 M700 300 L780 275"/><path d="M745 220 l6 40 l6 -40 M745 262 l6 40 l6 -40"/></g>
-<path id="flow1" d="M420 500 L505 500 L505 395" fill="none" stroke="none"/><path id="flow2" d="M505 395 L505 405 L560 405 L560 412" fill="none" stroke="none"/>
-<path class="link" d="M420 500 L505 500 L505 395 M505 405 L560 405 L560 412"/>
-<circle class="pulse" r="3"><animateMotion dur="3.2s" repeatCount="indefinite" begin="2.6s"><mpath href="#flow1"/></animateMotion></circle><circle class="pulse" r="3"><animateMotion dur="1.6s" repeatCount="indefinite" begin="4.2s"><mpath href="#flow2"/></animateMotion></circle>
-<g class="lb"><text x="180" y="304">BESS 300MW / 1.2GWh</text><text x="470" y="294">154kV</text><text x="470" y="700">DATA CENTER 200MW</text><text x="120" y="880">NAKA, IBARAKI — MASTER PLAN (IMAGE)</text></g>
-<g class="nz"><path d="M720 880 l10 -30 l10 30 l-10 -8z"/><text x="722" y="905">N</text><path d="M120 905 h120 M120 900 v10 M240 900 v10"/><text x="180" y="925" text-anchor="middle">200 m</text></g>
-</svg>
-        <div class="sweep" aria-hidden="true"></div>
-        <div class="cap" style="color:rgba(255,255,255,.6)">FUNDIA 1号 — 茨城那珂 300MW蓄電所・200MWデータセンター（計画図イメージ）</div>
+      <div class="eq-row">
+        <div class="lhs">費用<small>Cost</small></div>
+        <div class="eq-terms">
+          <div class="term"><div class="k"><span>Labor</span><i class="dn">▼ 減</i></div><b>人件費</b><span>1人あたり約100戸 → 300戸へ。</span></div>
+          <div class="op" aria-hidden="true">+</div>
+          <div class="term"><div class="k"><span>Outsourcing</span></div><b>外注費</b><span>発注を標準化し、条件を揃える。</span></div>
+          <div class="op" aria-hidden="true">+</div>
+          <div class="term"><div class="k"><span>AI</span><i class="up">▲ 増</i></div><b>AI費</b><span>増える。ただし減る人件費を大きく下回る。</span></div>
+          <div class="op" aria-hidden="true">+</div>
+          <div class="term"><div class="k"><span>HQ</span></div><b>本部費</b><span>経理・法務・開発を集約し、複数社で按分。</span></div>
+        </div>
       </div>
+      <div class="eq-note">※ 管理料単価は東京都の民営賃貸を想定した試算値。</div>
+    </div>
+
+    <div class="loop stagger">
+      <div><i class="n" aria-hidden="true">01</i><div class="k">Acquire</div><h3>買う</h3><p>後継者不在の管理会社を承継する。日本は承継ニーズが厚く、買収価格は利益の3〜5倍程度と低い。</p><div class="arrow"><b>管理戸数</b>が増える</div></div>
+      <div><i class="n" aria-hidden="true">02</i><div class="k">Fix</div><h3>直す</h3><p>電子化 → 標準化 → AI化の順で現場を変え、人件費率を下げる。一社で作った仕組みは、次の会社にそのまま移植できる。</p><div class="arrow"><b>利益率</b>が上がる</div></div>
+      <div><i class="n" aria-hidden="true">03</i><div class="k">Scale</div><h3>増やす</h3><p>管理料は景気に左右されにくく、銀行融資が付きやすい。改善した会社の収益が、次の承継の原資になる。</p><div class="arrow"><b>次の承継</b>へ</div></div>
+    </div>
+
+    <div class="ref reveal">
+      <div class="ttl">Reference model — Dwelly（英国）公表値</div>
+      <div class="stats">
+        <div><b>16<small>社</small></b><span class="l">買収社数</span><span class="s">2024年創業から2年で</span></div>
+        <div><b>1.5<small>万戸</small></b><span class="l">管理戸数</span><span class="s">英国トップ10規模</span></div>
+        <div><b>300<small>戸超</small></b><span class="l">1人あたり担当戸数</span><span class="s">約100戸から3倍に</span></div>
+        <div><b>10<small>日</small></b><span class="l">修繕対応期間の目標</span><span class="s">平均50日から。すでに30%短縮</span></div>
+      </div>
+      <span class="fine">※ Dwelly 公表情報に基づく参照値。PKHOME自身の実測値は1社目の承継後に公開します。</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="succession" class="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">04</div><div class="label" style="margin-top:16px">Succession</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>承継の進め方</span></h2><p class="lead reveal">初回のご相談から引き継ぎまで、原則として非公開で進めます。従業員・オーナー・入居者への説明は、合意後に一緒に行います。</p></div>
+    </div>
+    <div class="flow stagger" id="flow">
+      <div class="bar" aria-hidden="true"></div>
+      <div><div class="n">1</div><h3>ご相談</h3><p>管理戸数・体制・ご希望の時期を伺います。秘密保持契約を締結のうえ進めます。</p></div>
+      <div><div class="n">2</div><h3>評価・提案</h3><p>管理契約と収益の状況をもとに、承継の条件と引き継ぎ後の運営方針をご提案します。</p></div>
+      <div><div class="n">3</div><h3>合意・契約</h3><p>株式または事業の譲渡契約を締結。従業員の雇用継続を原則とします。</p></div>
+      <div><div class="n">4</div><h3>引き継ぎ・AI化</h3><p>オーナー・入居者へご案内のうえ、業務を段階的にすむすむの仕組みへ移行します。</p></div>
     </div>
   </div>
 </section>
 
-<section class="dark" id="approach">
+<section id="faq" class="paper">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">02</div><div class="label" style="margin-top:16px">Why PKHOME</div></div>
-      <div><h2 class="h2 mask reveal-h"><span>不動産と、AIと、M&amp;A。三つを同時に持つ会社。</span></h2><p class="lead reveal">現場を持ち、承継ができ、AIを自社で実装できる。三つ揃ってはじめて届く場所に、PKHOMEは立っています。</p></div>
+      <div><div class="num" aria-hidden="true">05</div><div class="label" style="margin-top:16px">FAQ</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>よくあるご質問</span></h2><p class="lead reveal">管理会社の経営者の方、物件オーナーの方から多いご質問です。</p></div>
     </div>
-    <div class="approach stagger">
-      <div class="app"><div class="n" aria-hidden="true">I</div><div class="k">Real Estate</div><h3>現場を持つ</h3><p>管理会社を自ら運営するから、机上ではなく現場の業務にAIを当てられる。</p></div>
-      <div class="app"><div class="n" aria-hidden="true">II</div><div class="k">AI</div><h3>内側から実装する</h3><p>外部にツールを売るのではなく、自社の業務を自社で置き換える。</p></div>
-      <div class="app"><div class="n" aria-hidden="true">III</div><div class="k">M&amp;A</div><h3>承継を繰り返す</h3><p>一社ごとに合意を重ね、同じ仕組みを移植する実務を持つ。</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="team">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="num" aria-hidden="true">03</div><div class="label" style="margin-top:16px">Team</div></div>
-      <div><h2 class="h2 mask reveal-h"><span>経営陣</span></h2></div>
-    </div>
-    <div class="team stagger">
-      <div class="member"><div class="role">CEO — 代表取締役</div><h3>工藤 拓也</h3><p>青森の大地主の家系に育ち、代々不動産を家業とする。不動産の売買・仲介・資産運用の最適化に取り組み、AIで物件情報・顧客対応・営業プロセスを効率化。PKHOMEを創業。</p><i aria-hidden="true">01</i></div>
-    </div>
-  </div>
-</section>
-
-<section id="news" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="num" aria-hidden="true">04</div><div class="label" style="margin-top:16px">News</div></div>
-      <div><h2 class="h2 mask reveal-h"><span>ニュース</span></h2></div>
-    </div>
-    <div class="news reveal">
-      <div class="item"><time>2026.09.28</time><span class="cat">Company</span><h3>コーポレートサイトを公開しました</h3></div>
+    <div class="faqs stagger">
+      <div>
+        <div class="k">For management companies</div>
+        <details><summary>承継後、社名や従業員はどうなりますか？<i></i></summary><p>原則としてどちらも継続します。社名・拠点・従業員の雇用・オーナーとの管理契約をそのまま引き継いだうえで、業務の進め方だけを段階的にすむすむの仕組みへ移行します。</p></details>
+        <details><summary>どのくらいの規模の会社が対象ですか？<i></i></summary><p>管理戸数数百戸から数千戸の地域密着型の管理会社を想定しています。規模よりも、管理契約の継続性とオーナーとの関係を重視します。</p></details>
+        <details><summary>相談したことが外部に知られませんか？<i></i></summary><p>初回のご相談から合意まで、秘密保持契約のもと非公開で進めます。従業員・オーナー・入居者へのご説明は、合意後に一緒に行います。</p></details>
+              </div>
+      <div>
+        <div class="k">For property owners</div>
+        <details><summary>管理会社が承継されると、管理料は変わりますか？<i></i></summary><p>承継を理由に管理料を引き上げることはありません。効率化の原資はコスト側であり、その成果は管理品質の向上と手残りの改善として還元します。</p></details>
+        <details><summary>担当者が変わってしまいませんか？<i></i></summary><p>従業員の雇用継続を原則としているため、担当者も原則として変わりません。AIが定型業務を担うぶん、担当者がオーナー様と向き合う時間はむしろ増えます。</p></details>
+        <details><summary>AIが対応すると、品質が下がりませんか？<i></i></summary><p>AIが担うのは受付・整理・確認・手配といった定型業務です。緊急時の判断、発注の承認、交渉は人が行います。対応履歴はすべて記録され、いつでも確認できます。</p></details>
+              </div>
     </div>
   </div>
 </section>
@@ -745,34 +756,13 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
     <p>後継者、人手、将来の管理品質。どの段階のご相談でも、秘密保持のうえでお受けします。</p>
     <span class="link">承継について相談する</span>
   </a>
-  <a href="mailto:info@pkhome.co.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">
+  <a href="mailto:info@pkhome.co.jp?subject=%E3%81%99%E3%82%80%E3%81%99%E3%82%80%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
     <span class="arrow" aria-hidden="true">→</span>
-    <div class="k">For investors &amp; partners</div>
-    <h3>投資家・金融機関・<br>提携をご検討の方へ</h3>
-    <p>事業計画・資金調達・業務提携に関するお問い合わせはこちらから。<br>info@pkhome.co.jp</p>
+    <div class="k">For owners &amp; residents</div>
+    <h3>物件オーナー・<br>入居者の方へ</h3>
+    <p>承継した管理会社の物件に関するお問い合わせ、管理のご相談はこちらから。<br>info@pkhome.co.jp</p>
     <span class="link">お問い合わせ</span>
   </a>
-</section>
-
-<section id="company">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="num" aria-hidden="true">05</div><div class="label" style="margin-top:16px">Company</div></div>
-      <div><h2 class="h2 mask reveal-h"><span>会社概要</span></h2></div>
-    </div>
-    <div class="company reveal">
-      <dl>
-        <div><dt>Name</dt><dd>PKHOME株式会社（パークホーム）</dd></div>
-        <div><dt>Corporate No.</dt><dd>法人番号　5011001179818</dd></div>
-        <div><dt>Business</dt><dd>賃貸管理事業「すむすむ」（管理会社の事業承継・AI運営）／不動産クラウドファンディング「FUNDIA」の運営／不動産の売買・仲介・管理</dd></div>
-        <div><dt>Founded</dt><dd>2026年8月21日</dd></div>
-        <div><dt>Address</dt><dd>〒150-0044　東京都渋谷区円山甹5番3号 MIEUX渋谷8階</dd></div>
-        <div><dt>Board</dt><dd>代表取締役CEO　工藤 拓也</dd></div>
-        <div><dt>License</dt><dd>宅地建物取引業免許・賃貸住宅管理業登録・不動産特定共同事業許可　いずれも申請準備中（取得後に掲載）</dd></div>
-        <div><dt>Contact</dt><dd>info@pkhome.co.jp</dd></div>
-      </dl>
-    </div>
-  </div>
 </section>
 
 <footer>
@@ -781,16 +771,16 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
       <div>
         <div class="logo">PKHOME</div>
         <p style="margin-top:20px">PKHOME株式会社</p>
-        <p>〒150-0044　東京都渋谷区円山甹5番3号 MIEUX渋谷8階</p>
+        <p>〒150-0044　東京都渋谷区円山町5番3号 MIEUX渋谷8階</p>
         <p>info@pkhome.co.jp</p>
       </div>
       <div>
-        <div class="ttl">Business</div>
-        <ul><li><a href="/sumusumu/">すむすむ</a></li><li><a href="/sumusumu/#succession">承継について</a></li><li><a href="/sumusumu/#faq">よくあるご質問</a></li><li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li></ul>
+        <div class="ttl">すむすむ</div>
+        <ul><li><a href="#forwhom">三者の変化</a></li><li><a href="#technology">テクノロジー</a></li><li><a href="#model">ビジネスモデル</a></li><li><a href="#succession">承継の進め方</a></li><li><a href="#faq">よくあるご質問</a></li></ul>
       </div>
       <div>
-        <div class="ttl">Company</div>
-        <ul><li><a href="#approach">Why PKHOME</a></li><li><a href="#team">経営陣</a></li><li><a href="#news">ニュース</a></li><li><a href="#company">会社概要</a></li><li><a href="#contact">お問い合わせ</a></li></ul>
+        <div class="ttl">PKHOME</div>
+        <ul><li><a href="/">コーポレートサイト</a></li><li><a href="/#team">経営陣</a></li><li><a href="/#company">会社概要</a></li><li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li></ul>
       </div>
       <div>
         <div class="ttl">Legal</div>
@@ -798,9 +788,9 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
       </div>
     </div>
     <div class="legal">※ 各種許認可は申請準備中です。取得後、本ページに番号を掲載します。掲載画像は準備中のため仮のものです。</div>
-    <div class="copy"><span>© 2026 PKHOME Inc.</span><span>Real Estate × Finance</span></div>
+    <div class="copy"><span>© 2026 PKHOME Inc.</span><span>すむすむ — AI-native property management</span></div>
   </div>
-  <div class="giant reveal-giant" id="giant" aria-hidden="true"><span>P</span><span>K</span><span>H</span><span>O</span><span>M</span><span>E</span></div>
+  <div class="giant reveal-giant" id="giant" aria-hidden="true"><span>S</span><span>U</span><span>M</span><span>U</span><span>S</span><span>U</span><span>M</span><span>U</span></div>
 </footer>
 
 <script>
