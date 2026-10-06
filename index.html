@@ -220,7 +220,8 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 .fine{font-size:12px;color:var(--muted);line-height:1.8}
 
 /* who (for whom) */
-.who{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);margin-top:72px}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:transparent;margin-top:72px;transition:background .3s .7s}
+.who.is-visible,.loop.is-visible,.decide.is-visible{background:var(--line)}
 @media (max-width:860px){.who{grid-template-columns:1fr}}
 .who>div{background:var(--paper);padding:clamp(28px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:background .5s}
 .who>div:hover{background:#FAF8F4}
@@ -279,6 +280,84 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 .scope .note span{display:inline-flex;align-items:center;gap:8px}
 .scope .note i{font-style:normal;font-family:var(--latin);font-size:9px;letter-spacing:.2em;border:1px solid var(--line-dark);padding:1px 6px;border-radius:999px;color:var(--on-dark);line-height:1.6}
 .scope .note i.hm{letter-spacing:0;background:var(--on-dark);color:var(--dark);border-color:var(--on-dark)}
+
+/* model */
+.eq{margin-top:72px;border-top:1px solid var(--line)}
+.eq-row{display:grid;grid-template-columns:120px 1fr;gap:clamp(16px,3vw,48px);padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
+@media (max-width:760px){.eq-row{grid-template-columns:1fr;gap:14px}.eq-terms .op{display:none}.term{flex-basis:100%}}
+.eq-row>.lhs{font-family:var(--serif);font-size:24px;letter-spacing:.1em;line-height:1.3;padding-top:6px}
+.eq-row>.lhs small{display:block;font-family:var(--latin);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.eq-terms{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.eq-terms .op{font-family:var(--display);font-size:34px;line-height:1;color:var(--muted);display:flex;align-items:center;padding:0 2px}
+.term{flex:1 1 200px;border:1px solid var(--line);padding:18px 20px;background:var(--bg);position:relative;min-width:0}
+.term .k{font-family:var(--latin);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.term .k i{font-style:normal;font-family:var(--latin);font-size:10px;letter-spacing:.1em;padding:0 6px;border-radius:999px;border:1px solid var(--line)}
+.term .k i.up{color:var(--ink);border-color:var(--ink)}
+.term .k i.dn{background:var(--ink);color:#fff;border-color:var(--ink)}
+.term b{display:block;font-weight:500;font-size:15px;margin-top:8px;line-height:1.7}
+.term span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:4px;line-height:1.8}
+.term.main{background:var(--paper)}
+.eq-note{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.9}
+
+.loop{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:transparent;transition:background .3s .7s;margin-top:clamp(64px,8vw,110px)}
+@media (max-width:860px){.loop{grid-template-columns:1fr}}
+.loop>div{background:var(--bg);padding:clamp(28px,3vw,44px);position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column}
+.loop .n{position:absolute;right:18px;top:6px;font-family:var(--display);font-size:120px;line-height:1;color:var(--ink);opacity:.06;pointer-events:none}
+.loop .k{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.loop h3{font-family:var(--serif);font-size:clamp(28px,3vw,40px);letter-spacing:.14em;margin:14px 0 18px;line-height:1.3}
+.loop p{margin:0;font-size:13.5px;color:var(--ink-2);flex:1}
+.loop .arrow{margin-top:26px;font-family:var(--latin);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+.loop .arrow::after{content:"";flex:1;height:1px;background:var(--line)}
+.loop .arrow b{font-weight:500;color:var(--ink)}
+
+.ref{margin-top:clamp(56px,7vw,90px);padding-top:40px;border-top:1px solid var(--line)}
+.ref .ttl{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.ref .ttl::after{content:"";flex:1;height:1px;background:var(--line);min-width:40px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:28px;background:var(--line)}
+@media (max-width:860px){.stats{grid-template-columns:1fr 1fr}}
+.stats>div{background:var(--bg);padding:26px 24px 22px}
+.stats b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(40px,4.4vw,64px);line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stats b small{font-family:var(--sans);font-size:13px;letter-spacing:.08em;margin-left:4px}
+.stats .l{display:block;margin-top:12px;font-size:13px;font-weight:500}
+.stats .s{display:block;margin-top:2px;font-size:12px;color:var(--muted);line-height:1.8}
+.ref .fine{display:block;margin-top:18px}
+
+.margin{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(32px,5vw,80px);margin-top:clamp(56px,7vw,90px);border-top:1px solid var(--line)}
+@media (max-width:760px){.margin{grid-template-columns:1fr}}
+.margin>div{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:26px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.margin .i{font-family:var(--display);font-size:22px;color:var(--muted);line-height:1.6}
+.margin b{display:block;font-weight:500;font-size:15px;margin-bottom:4px}
+.margin span{color:var(--ink-2)}
+
+.decide{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:transparent;transition:background .3s .7s;margin-top:clamp(64px,8vw,110px)}
+@media (max-width:860px){.decide{grid-template-columns:1fr}}
+.decide>div{background:var(--bg);padding:clamp(26px,3vw,40px)}
+.decide .k{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.decide h3{font-family:var(--serif);font-size:22px;letter-spacing:.08em;margin:12px 0 24px;line-height:1.5}
+.decide .ttl{font-family:var(--latin);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px;margin:0 0 6px}
+.decide .ttl::after{content:"";flex:1;height:1px;background:var(--line)}
+.decide ul{list-style:none;margin:0 0 22px;padding:0;font-size:13px}
+.decide .off li{padding:6px 0 6px 22px;position:relative;color:var(--ink-2);line-height:1.9}
+.decide .off li::before{content:"";position:absolute;left:0;top:.95em;width:10px;height:10px;border-radius:50%;background:var(--ink);transform:translateY(-50%)}
+.decide .off li::after{content:"";position:absolute;left:3px;top:.95em;width:4px;height:4px;border-radius:50%;background:#fff;transform:translateY(-50%)}
+.decide .on li{padding:6px 0 6px 22px;position:relative;line-height:1.9;font-weight:500}
+.decide .on li::before{content:"";position:absolute;left:0;top:.95em;width:10px;height:10px;border-radius:50%;border:1px solid var(--ink);transform:translateY(-50%)}
+
+/* faq */
+.faqs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);margin-top:72px}
+@media (max-width:900px){.faqs{grid-template-columns:1fr;gap:40px}}
+.faqs .k{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);padding-bottom:16px;border-bottom:1px solid var(--ink)}
+.faqs details{border-bottom:1px solid var(--line)}
+.faqs summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 20px;gap:16px;align-items:start;padding:20px 0;font-size:14.5px;font-weight:500;line-height:1.8;letter-spacing:.04em}
+.faqs summary::-webkit-details-marker{display:none}
+.faqs summary i{position:relative;width:14px;height:14px;margin-top:9px;justify-self:end}
+.faqs summary i::before,.faqs summary i::after{content:"";position:absolute;left:50%;top:50%;background:var(--ink);transition:transform .5s var(--ease)}
+.faqs summary i::before{width:14px;height:1px;transform:translate(-50%,-50%)}
+.faqs summary i::after{width:1px;height:14px;transform:translate(-50%,-50%)}
+.faqs details[open] summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faqs details p{margin:0;padding:0 36px 22px 0;font-size:13.5px;color:var(--ink-2);line-height:2}
+.faqs details[open] p{animation:fadein .6s var(--ease)}
+@keyframes fadein{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
 /* flow */
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:72px;position:relative}
@@ -378,6 +457,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   .art .plan .bess use,.art .plan .pcs,.art .plan .sub,.art .plan .dc,.art .plan .cool,.art .plan .pond,.art .plan .tx,.art .plan .wall g{opacity:1!important}
   .hero-art *{stroke-dashoffset:0!important}
   .who .turn::after{transform:none!important}
+  .who,.loop,.decide{background:var(--line)!important}
 }
 </style>
 </head>
@@ -397,6 +477,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
       <li><a href="#sumusumu">すむすむ</a></li>
       <li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li>
       <li><a href="#team">Team</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#company">Company</a></li>
     </ul>
     <div class="nav-r">
@@ -706,10 +787,74 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   </div>
 </section>
 
+<section id="model">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">05</div><div class="label" style="margin-top:16px">Business model</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>買って、直して、増やす。</span></h2><p class="lead reveal">すむすむの収益は、毎月入る管理料というストックです。承継で管理戸数を買い、AIで運営原価を下げ、安定収益を担保に次の承継へ。英国Dwellyが創業2年で証明したループを、日本の賃貸管理で回します。</p></div>
+    </div>
+
+    <div class="eq reveal">
+      <div class="eq-row">
+        <div class="lhs">売上<small>Revenue</small></div>
+        <div class="eq-terms">
+          <div class="term main"><div class="k"><span>Units</span><i class="up">▲ 増</i></div><b>管理戸数</b><span>承継で一度に数百〜数千戸を引き継ぎ、新規オーナーからの受託で積み増す。</span></div>
+          <div class="op" aria-hidden="true">×</div>
+          <div class="term main"><div class="k"><span>Revenue / unit / year</span></div><b>一戸あたり年間売上</b><span>主収益は管理料 約3.6万円／年（家賃6万円 × 管理料率5% × 12カ月の目安）。副収益として仲介料・更新料。</span></div>
+        </div>
+      </div>
+      <div class="eq-row">
+        <div class="lhs">費用<small>Cost</small></div>
+        <div class="eq-terms">
+          <div class="term"><div class="k"><span>Labor</span><i class="dn">▼ 減</i></div><b>人件費</b><span>1人あたり担当戸数を約100戸から300戸へ。事務・一次対応をAIに移す。</span></div>
+          <div class="op" aria-hidden="true">+</div>
+          <div class="term"><div class="k"><span>Outsourcing</span></div><b>外注費</b><span>修繕・清掃の手配を標準化し、協力会社への発注条件を揃える。</span></div>
+          <div class="op" aria-hidden="true">+</div>
+          <div class="term"><div class="k"><span>AI</span><i class="up">▲ 増</i></div><b>AI費</b><span>増えるコスト。ただし置き換える人件費を大きく下回る。</span></div>
+          <div class="op" aria-hidden="true">+</div>
+          <div class="term"><div class="k"><span>HQ</span></div><b>本部費</b><span>経理・法務・開発を本部に集約し、複数社で按分。会社が増えるほど一社あたりは軽くなる。</span></div>
+        </div>
+      </div>
+      <div class="eq-note">※ 管理料の単価は東京都の民営賃貸を想定した試算値。実際の管理料率・家賃水準は物件・地域により異なります。</div>
+    </div>
+
+    <div class="loop stagger">
+      <div><i class="n" aria-hidden="true">01</i><div class="k">Acquire</div><h3>買う</h3><p>後継者不在の賃貸管理会社を承継する。日本は事業承継ニーズが厚く、買収価格は利益の3〜5倍程度と、海外のロールアップに比べて低い水準です。</p><div class="arrow"><b>管理戸数</b>が増える</div></div>
+      <div><i class="n" aria-hidden="true">02</i><div class="k">Fix</div><h3>直す</h3><p>情報の電子化、業務手順の標準化、定型業務のAI化。この順番で現場を変え、1人あたり担当戸数を増やし、人件費率を下げます。各社の管理業務は似ているので、一社で作った仕組みは次の会社にもそのまま移植できます。</p><div class="arrow"><b>利益率</b>が上がる</div></div>
+      <div><i class="n" aria-hidden="true">03</i><div class="k">Scale</div><h3>増やす</h3><p>毎月入る管理料は景気に左右されにくいストック収益。銀行融資が付きやすく、改善した会社の収益が次の承継の原資になります。承継を繰り返すほど本部費が按分され、全体の利益率がさらに上がります。</p><div class="arrow"><b>次の承継</b>へ</div></div>
+    </div>
+
+    <div class="ref reveal">
+      <div class="ttl">Reference model — Dwelly（英国）公表値</div>
+      <div class="stats">
+        <div><b>16<small>社</small></b><span class="l">買収社数</span><span class="s">2024年創業から2年で</span></div>
+        <div><b>1.5<small>万戸</small></b><span class="l">管理戸数</span><span class="s">英国トップ10規模</span></div>
+        <div><b>300<small>戸超</small></b><span class="l">1人あたり担当戸数</span><span class="s">約100戸から3倍に</span></div>
+        <div><b>10<small>日</small></b><span class="l">修繕対応期間の目標</span><span class="s">平均50日から。すでに30%短縮</span></div>
+      </div>
+      <span class="fine">※ Dwelly の公表情報に基づく参照値。PKHOME自身の削減率・担当戸数の実測値は、1社目の承継後に本ページで公開します。</span>
+    </div>
+
+    <div class="ref reveal" style="padding-top:0;border:0;margin-top:clamp(56px,7vw,90px)"><div class="ttl">管理会社の利益率が上がる、四つの理由</div></div>
+    <div class="margin stagger" style="margin-top:0;border-top:0">
+      <div><div class="i">01</div><div><b>人件費率が下がる</b><span>最大の費目である人件費を、1人あたり担当戸数の引き上げで圧縮。採用難・人手不足の影響も受けにくくなります。</span></div></div>
+      <div><div class="i">02</div><div><b>外注費が標準化される</b><span>属人的だった修繕・清掃の発注を、仕様と単価の揃った形に。複数社分をまとめることで協力会社との条件も改善します。</span></div></div>
+      <div><div class="i">03</div><div><b>本部費が按分される</b><span>経理・法務・システムは一社ごとに持たず本部で一つ。承継する会社が増えるほど、一社あたりの負担は下がります。</span></div></div>
+      <div><div class="i">04</div><div><b>管理料は減らさない</b><span>効率化の原資はコスト側。オーナーへの管理料を値下げして戸数を取りにいくのではなく、品質と手残りの改善で選ばれる。</span></div></div>
+    </div>
+
+    <div class="decide stagger">
+      <div><div class="k">Field staff</div><h3>現場スタッフが、<br>判断しなくてよくなること</h3><div class="ttl">AIに任せる</div><ul class="off"><li>問い合わせの振り分けと緊急度の判定</li><li>契約・更新書類の作成と確認</li><li>入金照合と督促の初回連絡</li><li>修繕業者の候補出しと日程調整</li></ul><div class="ttl">人が決める</div><ul class="on"><li>緊急時の対応方針</li><li>発注の承認と費用の交渉</li></ul></div>
+      <div><div class="k">Owners</div><h3>オーナーが、<br>判断しなくてよくなること</h3><div class="ttl">AIに任せる</div><ul class="off"><li>軽微な修繕の業者選定（事前合意した上限額の範囲内）</li><li>入居者からの日常的な問い合わせ対応</li><li>月次の収支報告の作成</li></ul><div class="ttl">人が決める</div><ul class="on"><li>上限額を超える修繕・設備更新</li><li>賃料改定、売却・建て替えの方針</li></ul></div>
+      <div><div class="k">Residents</div><h3>入居者が、<br>判断しなくてよくなること</h3><div class="ttl">AIに任せる</div><ul class="off"><li>「誰に、いつ連絡するか」— 窓口は一つ、24時間</li><li>修繕の進捗確認 — 自動で共有される</li><li>更新・解約の手続き — 案内に沿って進むだけ</li></ul><div class="ttl">人が決める</div><ul class="on"><li>修繕の立ち会い日時の最終確認</li><li>契約条件に関わる相談</li></ul></div>
+    </div>
+  </div>
+</section>
+
 <section id="succession" class="paper">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">05</div><div class="label" style="margin-top:16px">Succession</div></div>
+      <div><div class="num" aria-hidden="true">06</div><div class="label" style="margin-top:16px">Succession</div></div>
       <div><h2 class="h2 mask reveal-h"><span>承継の進め方</span></h2><p class="lead reveal">初回のご相談から引き継ぎまで、原則として非公開で進めます。従業員・オーナー・入居者への説明は、合意後に一緒に行います。</p></div>
     </div>
     <div class="flow stagger" id="flow">
@@ -770,7 +915,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section class="dark" id="approach">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">06</div><div class="label" style="margin-top:16px">Why PKHOME</div></div>
+      <div><div class="num" aria-hidden="true">07</div><div class="label" style="margin-top:16px">Why PKHOME</div></div>
       <div><h2 class="h2 mask reveal-h"><span>不動産と、AIと、M&amp;A。三つを同時に持つ会社。</span></h2><p class="lead reveal">賃貸管理をAIで変えるには、管理の現場を実際に持ち、会社を承継する実務ができ、AIを自社で実装できる必要があります。どれか一つでは届かない場所に、PKHOMEは立っています。</p></div>
     </div>
     <div class="approach stagger">
@@ -781,10 +926,42 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   </div>
 </section>
 
+<section id="faq" class="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">08</div><div class="label" style="margin-top:16px">FAQ</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>よくあるご質問</span></h2><p class="lead reveal">管理会社の経営者の方、物件オーナーの方、投資家・金融機関の方から多くいただくご質問です。</p></div>
+    </div>
+    <div class="faqs stagger">
+      <div>
+        <div class="k">For management companies</div>
+        <details><summary>承継後、社名や従業員はどうなりますか？<i></i></summary><p>原則としてどちらも継続します。社名・拠点・従業員の雇用・オーナーとの管理契約をそのまま引き継いだうえで、業務の進め方だけを段階的にすむすむの仕組みへ移行します。</p></details>
+        <details><summary>どのくらいの規模の会社が対象ですか？<i></i></summary><p>管理戸数数百戸から数千戸の地域密着型の管理会社を想定しています。規模よりも、管理契約の継続性とオーナーとの関係を重視します。</p></details>
+        <details><summary>相談したことが外部に知られませんか？<i></i></summary><p>初回のご相談から合意まで、秘密保持契約のもと非公開で進めます。従業員・オーナー・入居者へのご説明は、合意後に一緒に行います。</p></details>
+        <details><summary>株式譲渡と事業譲渡、どちらになりますか？<i></i></summary><p>どちらにも対応します。許認可の引き継ぎ、契約の承継手続き、税務上のご事情を踏まえて、評価・提案の段階でご一緒に決めます。</p></details>
+      </div>
+      <div>
+        <div class="k">For property owners</div>
+        <details><summary>管理会社が承継されると、管理料は変わりますか？<i></i></summary><p>承継を理由に管理料を引き上げることはありません。効率化の原資はコスト側であり、その成果は管理品質の向上と手残りの改善として還元します。</p></details>
+        <details><summary>担当者が変わってしまいませんか？<i></i></summary><p>従業員の雇用継続を原則としているため、担当者も原則として変わりません。AIが定型業務を担うぶん、担当者がオーナー様と向き合う時間はむしろ増えます。</p></details>
+        <details><summary>AIが対応すると、品質が下がりませんか？<i></i></summary><p>AIが担うのは受付・整理・確認・手配といった定型業務です。緊急時の判断、発注の承認、交渉は人が行います。対応履歴はすべて記録され、いつでも確認できます。</p></details>
+        <details><summary>自分の物件の状況はどう確認できますか？<i></i></summary><p>入出金、問い合わせと対応の履歴、修繕の進捗を、報告を待たずにいつでも確認できる仕組みを提供します。月次の収支報告も自動で作成します。</p></details>
+      </div>
+      <div>
+        <div class="k">For investors &amp; lenders</div>
+        <details><summary>なぜ賃貸管理会社のロールアップなのですか？<i></i></summary><p>管理料は毎月入るストック収益で、景気変動に強く、金融機関の融資が付きやすいからです。加えて日本は事業承継ニーズが厚く、買収価格が利益の3〜5倍程度と低い。買って、直して、増やすループが成立する条件が揃っています。</p></details>
+        <details><summary>Dwellyと同じことが日本でできますか？<i></i></summary><p>各社の管理業務が似ていて標準化しやすい点は共通です。敷金・礼金、賃貸住宅管理業法といった日本固有の商習慣・規制には、不動産の現場を持つチームが対応します。</p></details>
+        <details><summary>削減率や担当戸数の実績はありますか？<i></i></summary><p>現在は参照モデルとしてDwellyの公表値（1人あたり約100戸→300戸超、修繕対応50日→10日目標）を掲載しています。PKHOME自身の実測値は、1社目の承継後に本ページで公開します。</p></details>
+        <details><summary>FUNDIAとすむすむの関係は？<i></i></summary><p>すむすむが管理の現場を持つことで、FUNDIAは取得した不動産の運営まで自社で担えます。運営する側と投資する側、不動産の両端を一社で持つことがPKHOMEの構造です。</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="team">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">07</div><div class="label" style="margin-top:16px">Team</div></div>
+      <div><div class="num" aria-hidden="true">09</div><div class="label" style="margin-top:16px">Team</div></div>
       <div><h2 class="h2 mask reveal-h"><span>経営陣</span></h2></div>
     </div>
     <div class="team stagger">
@@ -796,7 +973,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section id="news" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">08</div><div class="label" style="margin-top:16px">News</div></div>
+      <div><div class="num" aria-hidden="true">10</div><div class="label" style="margin-top:16px">News</div></div>
       <div><h2 class="h2 mask reveal-h"><span>ニュース</span></h2></div>
     </div>
     <div class="news reveal">
@@ -825,7 +1002,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section id="company">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">09</div><div class="label" style="margin-top:16px">Company</div></div>
+      <div><div class="num" aria-hidden="true">11</div><div class="label" style="margin-top:16px">Company</div></div>
       <div><h2 class="h2 mask reveal-h"><span>会社概要</span></h2></div>
     </div>
     <div class="company reveal">
@@ -854,11 +1031,11 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
       </div>
       <div>
         <div class="ttl">Business</div>
-        <ul><li><a href="#sumusumu">すむすむ</a></li><li><a href="#forwhom">オーナー・入居者の方へ</a></li><li><a href="#technology">テクノロジー</a></li><li><a href="#succession">承継について</a></li><li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li></ul>
+        <ul><li><a href="#sumusumu">すむすむ</a></li><li><a href="#forwhom">オーナー・入居者の方へ</a></li><li><a href="#technology">テクノロジー</a></li><li><a href="#model">ビジネスモデル</a></li><li><a href="#succession">承継について</a></li><li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li></ul>
       </div>
       <div>
         <div class="ttl">Company</div>
-        <ul><li><a href="#vision">ビジョン</a></li><li><a href="#team">経営陣</a></li><li><a href="#news">ニュース</a></li><li><a href="#company">会社概要</a></li><li><a href="#contact">お問い合わせ</a></li></ul>
+        <ul><li><a href="#vision">ビジョン</a></li><li><a href="#team">経営陣</a></li><li><a href="#news">ニュース</a></li><li><a href="#faq">よくあるご質問</a></li><li><a href="#company">会社概要</a></li><li><a href="#contact">お問い合わせ</a></li></ul>
       </div>
       <div>
         <div class="ttl">Legal</div>
