@@ -219,6 +219,67 @@ section{padding-block:clamp(96px,14vw,200px);scroll-margin-top:24px;position:rel
 .feature-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:44px;align-items:center}
 .fine{font-size:12px;color:var(--muted);line-height:1.8}
 
+/* who (for whom) */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);margin-top:72px}
+@media (max-width:860px){.who{grid-template-columns:1fr}}
+.who>div{background:var(--paper);padding:clamp(28px,3vw,44px);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:background .5s}
+.who>div:hover{background:#FAF8F4}
+.who .n{position:absolute;right:18px;top:6px;font-family:var(--display);font-size:110px;line-height:1;color:var(--ink);opacity:.06;pointer-events:none}
+.who .k{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.who h3{font-family:var(--serif);font-size:clamp(20px,1.75vw,26px);letter-spacing:.08em;margin:14px 0 30px;line-height:1.55}
+.who .ttl{font-family:var(--latin);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.who .ttl::after{content:"";flex:1;height:1px;background:var(--line)}
+.who ul{list-style:none;margin:0;padding:0;font-size:13px}
+.who .now li{color:var(--muted);padding:5px 0 5px 20px;position:relative;line-height:1.9}
+.who .now li::before{content:"";position:absolute;left:0;top:calc(.95em + 1px);width:9px;height:1px;background:var(--muted)}
+.who .turn{font-family:var(--display);font-style:italic;font-size:30px;line-height:1;color:var(--muted);margin:26px 0 20px;display:flex;align-items:center;gap:14px}
+.who .turn::after{content:"";width:40px;height:1px;background:var(--ink);transform-origin:left;transform:scaleX(0);transition:transform 1s var(--ease) .5s}
+.who.is-visible .turn::after{transform:scaleX(1)}
+.who .then li{padding:12px 0;position:relative;color:var(--ink);border-top:1px solid var(--line);line-height:1.9}
+.who .then li:last-child{border-bottom:1px solid var(--line)}
+.who .then b{display:block;font-weight:500;font-size:14px}
+.who .then span{display:block;color:var(--ink-2);font-size:12.5px;margin-top:2px}
+
+/* scenario */
+.scn-h{margin-top:72px;display:flex;align-items:center;gap:20px;font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-2)}
+.scn-h::after{content:"";flex:1;height:1px;background:var(--line-dark)}
+.scn{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr 1fr;gap:2px;background:var(--line-dark);margin-top:18px;position:relative}
+.scn::before{content:"";position:absolute;left:0;top:-19px;height:1px;background:var(--on-dark);width:var(--p,0%);transition:width .2s linear;z-index:1}
+@media (max-width:1100px){.scn{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:700px){.scn{grid-template-columns:1fr}}
+.scn>div{background:var(--dark);padding:clamp(26px,2.6vw,38px);min-height:380px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background .5s}
+.scn>div:hover{background:var(--dark-2)}
+.scn .k{font-family:var(--latin);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-2);display:flex;justify-content:space-between;gap:10px}
+.scn .k i{font-style:normal;font-family:var(--display);font-size:20px;letter-spacing:0;line-height:1;opacity:.6;text-transform:none}
+.scn h3{font-family:var(--serif);font-size:21px;letter-spacing:.06em;margin:22px 0 14px;line-height:1.5}
+.scn p{margin:0;font-size:13px;color:var(--on-dark-2);flex:1}
+.scn ul{list-style:none;padding:0;margin:18px 0 0;font-size:12px;color:var(--on-dark-2)}
+.scn li{padding:7px 0;border-top:1px solid var(--line-dark);line-height:1.8}
+.scn .trig{background:var(--dark-2);justify-content:flex-start}
+.scn .trig .msg{margin-top:26px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px 16px 16px 4px;padding:16px 18px;font-size:14px;line-height:1.8;color:var(--on-dark);position:relative;max-width:22em}
+.scn .trig .msg::after{content:"";position:absolute;right:-3px;bottom:12px;width:8px;height:8px;border-radius:50%;background:var(--on-dark);box-shadow:0 0 0 0 rgba(255,255,255,.5);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.55)}100%{box-shadow:0 0 0 14px rgba(255,255,255,0)}}
+.scn .trig .meta{font-family:var(--latin);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-dark-2);margin-top:14px;display:flex;gap:14px}
+.scn .trig .hint{margin-top:auto;padding-top:28px;font-size:12.5px;color:var(--on-dark-2)}
+.scn .human{background:var(--on-dark);color:var(--dark)}
+.scn .human:hover{background:#FFFDF8}
+.scn .human .k,.scn .human p,.scn .human ul{color:var(--ink-2)}
+.scn .human li{border-color:var(--line)}
+.scn .human .k i{opacity:.8}
+.scope{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,64px);margin-top:clamp(64px,8vw,110px);padding-top:48px;border-top:1px solid var(--line-dark)}
+@media (max-width:760px){.scope{grid-template-columns:1fr;gap:36px}}
+.scope .k{font-family:var(--latin);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-2)}
+.scope h3{font-family:var(--serif);font-size:22px;letter-spacing:.08em;margin:14px 0 18px}
+.scope ul{list-style:none;padding:0;margin:0;font-size:13px;color:var(--on-dark-2)}
+.scope li{padding:9px 0;border-top:1px solid var(--line-dark);display:flex;gap:14px;align-items:baseline}
+.scope li:last-child{border-bottom:1px solid var(--line-dark)}
+.scope li::before{content:"AI";font-family:var(--latin);font-size:9px;letter-spacing:.2em;color:var(--on-dark);border:1px solid var(--line-dark);padding:1px 6px;border-radius:999px;flex:none;line-height:1.6}
+.scope li.hm::before{content:"人";letter-spacing:0;background:var(--on-dark);color:var(--dark);border-color:var(--on-dark)}
+.scope .note{margin-top:32px;font-size:12px;color:var(--on-dark-2);display:flex;gap:16px;flex-wrap:wrap}
+.scope .note span{display:inline-flex;align-items:center;gap:8px}
+.scope .note i{font-style:normal;font-family:var(--latin);font-size:9px;letter-spacing:.2em;border:1px solid var(--line-dark);padding:1px 6px;border-radius:999px;color:var(--on-dark);line-height:1.6}
+.scope .note i.hm{letter-spacing:0;background:var(--on-dark);color:var(--dark);border-color:var(--on-dark)}
+
 /* flow */
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:72px;position:relative}
 .flow::before{content:"";position:absolute;left:0;right:0;top:20px;height:1px;background:var(--line)}
@@ -316,6 +377,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   .statement .big .w{opacity:1!important}
   .art .plan .bess use,.art .plan .pcs,.art .plan .sub,.art .plan .dc,.art .plan .cool,.art .plan .pond,.art .plan .tx,.art .plan .wall g{opacity:1!important}
   .hero-art *{stroke-dashoffset:0!important}
+  .who .turn::after{transform:none!important}
 }
 </style>
 </head>
@@ -411,7 +473,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
     <div class="pillars reveal">
       <a class="pillar" href="#sumusumu">
         <div class="art" aria-hidden="true"><svg viewBox="0 0 400 400"><rect class="f" x="60" y="120" width="280" height="220"/><path class="l" d="M60 120 H340 V340 H60 Z M60 200 H340 M60 270 H340 M150 120 V340 M250 120 V340"/><path class="l" d="M100 200 V270 M300 120 V200"/></svg></div>
-        <div><div class="kicker">01 — For owners &amp; residents</div><h3>すむすむ</h3><div class="sub">AI-native property management</div><p>事業承継で引き継いだ賃貸管理会社を、AIで運営する。英国Dwellyのモデルを日本の管理業務に合わせて再構築した、PKHOMEの中核事業です。</p></div>
+        <div><div class="kicker">01 — For owners &amp; residents</div><h3>すむすむ</h3><div class="sub">AI-native property management</div><p>後継者不在の賃貸管理会社を引き継ぎ、受付・事務・修繕手配をAIで運営する。オーナーには見える管理と手残りを、入居者には夜間・休日も届く応対を。英国Dwellyのモデルを日本の管理業務に合わせて再構築した、PKHOMEの中核事業です。</p></div>
         <span class="link">Learn more</span>
       </a>
       <a class="pillar" href="https://fundia.net" target="_blank" rel="noopener">
@@ -514,7 +576,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
         <ul class="points stagger">
           <li><div><b>管理会社を、承継で引き継ぐ</b><span>後継者不在の賃貸管理会社を買収し、社名・スタッフ・管理契約をそのまま継続。オーナーと入居者の関係を途切れさせません。</span></div></li>
           <li><div><b>問い合わせから送金まで、AIが運営</b><span>入居者の問い合わせ一次対応、契約・更新書類、家賃送金と督促の自動化。人は判断と対面にだけ時間を使います。</span></div></li>
-          <li><div><b>管理料というストック収益</b><span>景気に左右されにくい管理料収入を土台に、承継と自動化を繰り返す。地域をまたいで、同じ仕組みを積み上げます。</span></div></li>
+          <li><div><b>人の仕事は、判断と対面に</b><span>緊急時の判断、発注の承認、交渉。定型業務をAIに任せるぶん、スタッフはオーナーと入居者に向き合う時間を取り戻します。</span></div></li>
         </ul>
         <div class="feature-actions"><a class="btn" href="#contact" data-magnet><span>管理会社の承継をご検討の方</span></a></div>
       </div>
@@ -522,10 +584,132 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   </div>
 </section>
 
+<section id="forwhom" class="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">03</div><div class="label" style="margin-top:16px">For whom</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>三者の毎日が、こう変わる。</span></h2><p class="lead reveal">賃貸管理の負担は、管理会社だけのものではありません。物件を預けるオーナー、そこに暮らす入居者。すむすむは、三者それぞれの「困りごと」から設計しています。</p></div>
+    </div>
+    <div class="who stagger">
+      <div>
+        <i class="n" aria-hidden="true">01</i>
+        <div class="k">For management companies</div>
+        <h3>会社を途切れさせず、<br>次へ渡す。</h3>
+        <div class="ttl">いま</div>
+        <ul class="now">
+          <li>業務が人に付いていて、引き継ぎが難しい</li>
+          <li>手作業が多く、人件費の負担が重い</li>
+          <li>協力会社との連携、そして後継者がいない</li>
+        </ul>
+        <div class="turn">then</div>
+        <ul class="then">
+          <li><b>社名・従業員・管理契約をそのまま承継</b><span>オーナーと入居者との関係を途切れさせず、雇用継続を原則に引き継ぎます。</span></li>
+          <li><b>定型業務をAIが肩代わり</b><span>受付・書類・入金照合・修繕手配。属人化していた業務が、仕組みに移ります。</span></li>
+          <li><b>残る人の仕事が、軽くなる</b><span>現場スタッフは判断と対面に集中。承継後のほうが働きやすい会社をつくります。</span></li>
+        </ul>
+      </div>
+      <div>
+        <i class="n" aria-hidden="true">02</i>
+        <div class="k">For property owners</div>
+        <h3>見える管理と、<br>手残りの改善。</h3>
+        <div class="ttl">いま</div>
+        <ul class="now">
+          <li>管理料・手数料の負担感</li>
+          <li>自分の物件が今どうなっているか、見えにくい</li>
+          <li>トラブルのたびに、連絡と判断の手間がかかる</li>
+        </ul>
+        <div class="turn">then</div>
+        <ul class="then">
+          <li><b>管理状況が、いつでも見える</b><span>入出金、対応履歴、修繕の進捗。報告を待たずに確認できます。</span></li>
+          <li><b>トラブル対応は、仕組みで進む</b><span>一次対応から業者手配、進捗共有までを自動化。オーナーに届くのは判断が要る連絡だけ。</span></li>
+          <li><b>効率化の成果を、品質と手残りに</b><span>運営コストの削減分を、管理品質の向上とオーナーの手残り改善に還元します。</span></li>
+        </ul>
+      </div>
+      <div>
+        <i class="n" aria-hidden="true">03</i>
+        <div class="k">For residents</div>
+        <h3>夜でも、週末でも、<br>まず届く。</h3>
+        <div class="ttl">いま</div>
+        <ul class="now">
+          <li>問い合わせや修繕の対応が遅い</li>
+          <li>土日・夜間は、そもそも連絡がつかない</li>
+          <li>入居手続きの書類が多く、煩雑</li>
+        </ul>
+        <div class="turn">then</div>
+        <ul class="then">
+          <li><b>24時間、まず受け付ける</b><span>夜間も休日も、問い合わせはAIが受け付け、緊急度を判断して動き出します。</span></li>
+          <li><b>修繕の進捗が、わかる</b><span>業者の手配状況や訪問日程を共有。「いつ直るのか」を問い合わせる必要がありません。</span></li>
+          <li><b>申込みから契約まで、オンラインで</b><span>必要情報の確認と書類処理をAIが支援。手続きのために店舗へ行かなくて済みます。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="technology">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="num" aria-hidden="true">04</div><div class="label" style="margin-top:16px">Technology</div></div>
+      <div><h2 class="h2 mask reveal-h"><span>土曜日の夜、漏水の連絡が来たら。</span></h2><p class="lead reveal">問い合わせの受付から案件の完了まで。AIが整理し、確認し、手配を進め、人は判断にだけ集中する。すむすむの現場は、こう動きます。</p></div>
+    </div>
+    <div class="scn-h reveal">Scenario — 入居者からの緊急連絡</div>
+    <div class="scn stagger" id="scn">
+      <div class="trig">
+        <div class="k"><span>Incoming</span><i>土</i></div>
+        <div class="msg">天井から水が落ちてきています。どうすればいいですか？</div>
+        <div class="meta"><span>SAT 21:04</span><span>Resident</span></div>
+        <div class="hint">これまでなら、月曜の朝まで誰にもつながらなかった連絡。</div>
+      </div>
+      <div>
+        <div class="k"><span>AI</span><i>01</i></div>
+        <h3>連絡の整理</h3>
+        <p>内容と緊急度を判定し、写真や状況を聞き取って案件として起票。入居者には「受け付けました」と次の動きをすぐ返します。</p>
+        <ul><li>緊急度の判定</li><li>状況・写真の聞き取り</li><li>案件の起票と入居者への一次返信</li></ul>
+      </div>
+      <div>
+        <div class="k"><span>AI</span><i>02</i></div>
+        <h3>物件・契約の確認</h3>
+        <p>該当住戸の設備、契約内容、保険や保証の範囲、過去の修繕履歴を照合。上階住戸への影響も含めて、対応の前提を揃えます。</p>
+        <ul><li>設備・契約・保証範囲の照合</li><li>修繕履歴と関連住戸の確認</li><li>費用負担の整理</li></ul>
+      </div>
+      <div>
+        <div class="k"><span>AI</span><i>03</i></div>
+        <h3>業者への連絡と進捗管理</h3>
+        <p>協力会社へ手配し、訪問日程を調整。入居者とオーナーには進捗を共有し、完了まで案件を追い続けます。</p>
+        <ul><li>協力会社への手配・日程調整</li><li>入居者・オーナーへの進捗共有</li><li>完了確認と対応履歴の記録</li></ul>
+      </div>
+      <div class="human">
+        <div class="k"><span>Human</span><i>人</i></div>
+        <h3>人が、判断する</h3>
+        <p>止水や避難が必要な緊急判断、発注の承認、費用をめぐる交渉。AIが前提を揃えたうえで、人は判断にだけ時間を使います。</p>
+        <ul><li>緊急時の判断</li><li>発注の承認</li><li>交渉・対面の対応</li></ul>
+      </div>
+    </div>
+    <div class="scope stagger">
+      <div>
+        <div class="k">Before move-in</div>
+        <h3>入居前</h3>
+        <ul><li>問い合わせへの対応</li><li>申込み・契約書の処理</li><li>必要情報の確認</li><li class="hm">入居審査の最終判断</li></ul>
+      </div>
+      <div>
+        <div class="k">During tenancy</div>
+        <h3>入居中</h3>
+        <ul><li>土日・夜間の受付</li><li>修繕の手配と進捗管理</li><li>対応履歴の共有</li><li class="hm">緊急判断・発注承認</li></ul>
+      </div>
+      <div>
+        <div class="k">Back office</div>
+        <h3>管理事務</h3>
+        <ul><li>入金の照合</li><li>オーナーへの報告</li><li>更新・解約の事務</li><li class="hm">オーナーとの交渉・提案</li></ul>
+      </div>
+    </div>
+    <div class="scope" style="display:block;border:0;padding:0;margin-top:0"><div class="note reveal"><span><i>AI</i>AIが担う業務</span><span><i class="hm">人</i>人が判断・承認する業務</span></div></div>
+  </div>
+</section>
+
 <section id="succession" class="paper">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">03</div><div class="label" style="margin-top:16px">Succession</div></div>
+      <div><div class="num" aria-hidden="true">05</div><div class="label" style="margin-top:16px">Succession</div></div>
       <div><h2 class="h2 mask reveal-h"><span>承継の進め方</span></h2><p class="lead reveal">初回のご相談から引き継ぎまで、原則として非公開で進めます。従業員・オーナー・入居者への説明は、合意後に一緒に行います。</p></div>
     </div>
     <div class="flow stagger" id="flow">
@@ -586,7 +770,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section class="dark" id="approach">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">04</div><div class="label" style="margin-top:16px">Why PKHOME</div></div>
+      <div><div class="num" aria-hidden="true">06</div><div class="label" style="margin-top:16px">Why PKHOME</div></div>
       <div><h2 class="h2 mask reveal-h"><span>不動産と、AIと、M&amp;A。三つを同時に持つ会社。</span></h2><p class="lead reveal">賃貸管理をAIで変えるには、管理の現場を実際に持ち、会社を承継する実務ができ、AIを自社で実装できる必要があります。どれか一つでは届かない場所に、PKHOMEは立っています。</p></div>
     </div>
     <div class="approach stagger">
@@ -600,7 +784,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section id="team">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">05</div><div class="label" style="margin-top:16px">Team</div></div>
+      <div><div class="num" aria-hidden="true">07</div><div class="label" style="margin-top:16px">Team</div></div>
       <div><h2 class="h2 mask reveal-h"><span>経営陣</span></h2></div>
     </div>
     <div class="team stagger">
@@ -612,7 +796,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section id="news" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">06</div><div class="label" style="margin-top:16px">News</div></div>
+      <div><div class="num" aria-hidden="true">08</div><div class="label" style="margin-top:16px">News</div></div>
       <div><h2 class="h2 mask reveal-h"><span>ニュース</span></h2></div>
     </div>
     <div class="news reveal">
@@ -641,7 +825,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
 <section id="company">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="num" aria-hidden="true">07</div><div class="label" style="margin-top:16px">Company</div></div>
+      <div><div class="num" aria-hidden="true">09</div><div class="label" style="margin-top:16px">Company</div></div>
       <div><h2 class="h2 mask reveal-h"><span>会社概要</span></h2></div>
     </div>
     <div class="company reveal">
@@ -670,7 +854,7 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
       </div>
       <div>
         <div class="ttl">Business</div>
-        <ul><li><a href="#sumusumu">すむすむ</a></li><li><a href="#succession">承継について</a></li><li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li></ul>
+        <ul><li><a href="#sumusumu">すむすむ</a></li><li><a href="#forwhom">オーナー・入居者の方へ</a></li><li><a href="#technology">テクノロジー</a></li><li><a href="#succession">承継について</a></li><li><a href="https://fundia.net" target="_blank" rel="noopener">FUNDIA</a></li></ul>
       </div>
       <div>
         <div class="ttl">Company</div>
@@ -754,9 +938,9 @@ footer{background:var(--dark);color:var(--on-dark-2);padding:96px 0 0;font-size:
   }
 
   // flow progress line
-  var flow = document.getElementById('flow');
-  if(flow){
-    function fl(){ var r = flow.getBoundingClientRect(); var vh = window.innerHeight; var p = Math.min(1, Math.max(0, (vh*0.85 - r.top)/(r.height*1.2))); flow.style.setProperty('--p', (p*100).toFixed(1)+'%'); }
+  var flows = Array.prototype.slice.call(document.querySelectorAll('#flow,#scn'));
+  if(flows.length){
+    function fl(){ var vh = window.innerHeight; flows.forEach(function(flow){ var r = flow.getBoundingClientRect(); var p = Math.min(1, Math.max(0, (vh*0.85 - r.top)/(r.height*1.2))); flow.style.setProperty('--p', (p*100).toFixed(1)+'%'); }); }
     document.addEventListener('scroll', fl, {passive:true}); fl();
   }
 
